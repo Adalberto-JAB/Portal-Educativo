@@ -1,0 +1,415 @@
+/* --- Reinicio básico y box-sizing --- */
+* {
+  box-sizing: border-box;
+}
+
+/* Configuración base para usar rem */
+html {
+  font-size: 14px; /* Base para cálculos rem */
+}
+
+/* Fuentes y colores personalizados */
+/*
+Título del portal Montserrat 32–36px Negrita
+Encabezados de sección Montserrat 20-24px Semi-negrita 
+Texto de contenido Roboto 16px Regular
+Texto en botones OPEN SANS 18px Negrita / Mayúscula 
+Notas pequeñas / Footer Roboto 12-14 px Regular / Gris claro
+*/
+
+.txt-color-primario {
+  /* Azul institucional */
+  color: #1A4D7F;
+}
+.txt-color-secundario {
+  /* Naranja complementario */ 
+  color: #FF7F11;
+}
+.txt-fondo-general {
+  /* Blanco cálido */
+  color: #F8F8F8;
+} 
+.txt-texto-principal {
+  /* Gris oscuro neutro */
+  color: #333333; 
+}
+.txt-enfasis-alerta {
+  /* Rojo vibrante */
+  color: #C62828;
+}
+
+.bg-color-primario {
+  /* Azul institucional */
+  background-color: #1A4D7F;
+}
+.bg-color-secundario {
+  /* Naranja complementario */ 
+  background-color: #FF7F11;
+}
+.bg-fondo-general {
+  /* Blanco cálido */
+  background-color: #F8F8F8;
+} 
+.bg-texto-principal {
+  /* Gris oscuro neutro */
+  background-color: #333333; 
+}
+.bg-enfasis-alerta {
+  /* Rojo vibrante */
+  background-color: #C62828;
+}
+
+
+
+/* ------------------------------------ */
+/* ESTILOS POR DEFECTO (MOBILE-FIRST)  */
+/* ------------------------------------ */
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* CONTENEDOR HEADER */
+header {
+  grid-area: header;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "sec-01"
+    "sec-02"
+    "sec-03";
+  grid-template-rows: auto 1fr auto;
+  height: auto; /* Permitir que el contenido defina la altura para móvil */
+  /* min-height: 45vh;  <-- ELIMINA ESTO O AJÚSTALO PARA MÓVIL, YA ESTÁ CUBIERTO POR height: auto; */
+}
+
+.barra-sup {
+  grid-area: sec-01;
+}
+
+.barra-central {
+  grid-area: sec-02;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.barra-buscar {
+  grid-area: sec-03;
+}
+
+/* CONTENEDOR MAIN */
+main {
+  grid-area: main;
+  display: flex; /* En móvil, main será flexbox, con sidebar y content en columna */
+  flex-direction: column;
+  padding: 0;
+  gap: 0;
+}
+
+/* CONTENEDOR ASIDE DEL MAIN (Sidebar) */
+.sidebar {
+  display: block;
+  width: 100%;
+}
+
+/* CONTENEDOR PRINCIPAL DEL MAIN */
+.main-content {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* ESTILOS PARA EL FOOTER */
+footer {
+  grid-area: footer;
+  width: 100%;
+}
+
+/* ******************************************** */
+/* MENU HAMBURGUESA (Estilos por defecto para móvil) */
+/* ******************************************** */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Asegura que el enlace ocupe todo el espacio del li y tenga padding */
+}
+
+/* --- Ocultar el Checkbox Principal --- */
+.menu-toggle {
+  display: none;
+}
+
+/* --- Ícono de Hamburguesa (visible en móvil por defecto) --- */
+.hamburger {
+  display: flex; /* Mostrar por defecto en móvil */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(253 186 116);
+  transition: all 0.3s ease;
+}
+
+/* --- Estilos del Menú de Navegación Principal (Oculto por defecto en móvil) --- */
+.nav-menu {
+  position: absolute;
+  top: 100%; /* Se despliega debajo de su contenedor padre con `position: relative` */
+  left: 0;
+  width: 100%;
+  background-color: #444;
+  flex-direction: column; /* Ítems apilados verticalmente por defecto */
+  display: none; /* OCULTAR EL MENÚ POR DEFECTO EN MÓVIL */
+  overflow-y: auto; /* Permite scroll si el contenido es demasiado largo */
+  max-height: calc(100vh - 100%); /* Altura máxima para evitar que se desborde */
+  transition: all 0.3s ease; /* Transición para que no aparezca de golpe */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Asegurar que esté por encima de otros contenidos */
+}
+
+.nav-menu ul {
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.nav-menu ul li {
+  margin: 0;
+  color: white;
+  border-bottom: 1px solid #555;
+  position: relative; /* Necesario para el submenú */
+  padding: 0; /* Asegura que el padding lo manejen los hijos (a o label) */
+}
+
+.nav-menu ul li:last-child {
+  border-bottom: none;
+}
+
+/* Estilos de los enlaces directos en el menú principal (Inicio, Acerca de, Contacto) */
+.nav-menu ul li a {
+  padding: 1rem; /* Padding consistente para todos los items principales */
+  border-radius: 0;
+}
+
+/* --- EFECTO DE APERTURA/CIERRE DEL MENÚ PRINCIPAL (con display: flex) --- */
+.menu-toggle:checked ~ .nav-menu {
+  display: flex; /* Mostrar el menú principal cuando el checkbox está marcado */
+}
+
+/* Animación de las líneas de la hamburguesa */
+.menu-toggle:checked ~ .hamburger .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle:checked ~ .hamburger .line:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle:checked ~ .hamburger .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Submenú en Móvil (visible/desplegable por checkbox) --- */
+.submenu-toggle {
+  display: none; /* Ocultar el checkbox del submenú */
+}
+
+/* OCULTAR EL ENLACE DE DESKTOP EN MÓVIL */
+.desktop-submenu-link {
+    display: none;
+}
+
+/* Estilos para el elemento que activa el submenú en móvil */
+.mobile-submenu-trigger {
+  display: flex; /* Mostrar para móvil */
+  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center; /* Centrar el contenido verticalmente */
+  padding: 1rem; /* MISMO PADDING que los enlaces directos */
+  cursor: pointer;
+  width: 100%; /* Asegurar que la label ocupe todo el ancho */
+  color: white; /* Asegurar que el texto sea blanco */
+}
+
+.mobile-submenu-trigger .menu-item-text {
+  flex-grow: 1; /* Para que el texto ocupe el espacio disponible */
+}
+
+.mobile-submenu-trigger .submenu-arrow {
+  display: block; /* Asegurar que la flecha sea un bloque */
+  margin-left: 0.5rem; /* Pequeño espacio entre texto y flecha */
+  transition: transform 0.3s ease;
+}
+
+/* Rotar la flecha cuando el submenú está abierto */
+.submenu-toggle:checked ~ .mobile-submenu-trigger .submenu-arrow {
+  transform: rotate(180deg);
+}
+
+.has-submenu .submenu-content {
+  position: static; /* No absoluto en móvil, para que ocupe espacio dentro del flujo */
+  display: none; /* OCULTAR EL SUBMENÚ POR DEFECTO EN MÓVIL */
+  background-color: #555;
+  width: 100%;
+  box-shadow: none;
+  text-align: center;
+  padding: 0;
+  border-radius: 0;
+  /* Eliminamos max-height y transition para un despliegue directo con display */
+  /* transition: max-height 0.3s ease;  <-- ELIMINAR */
+  /* max-height: 0;  <-- ELIMINAR */
+  overflow: hidden; /* Mantener hidden para evitar barra de scroll inicial */
+}
+
+.has-submenu .submenu-content li a {
+  padding: 0.8rem 1rem; /* Padding para los items del submenú */
+  border-bottom: 1px solid #666;
+}
+.has-submenu .submenu-content li:last-child a {
+  border-bottom: none;
+}
+
+/* Mostrar el submenú cuando su checkbox está marcado */
+.submenu-toggle:checked ~ .submenu-content {
+  display: block; /* MOSTRAR EL SUBMENÚ CUANDO EL CHECKBOX ESTÁ MARCADO */
+  overflow: visible; /* Asegurar que el contenido sea visible */
+  /* max-height: 300px;  <-- YA NO ES NECESARIO CON display: block */
+}
+
+
+/* ------------------------------------ */
+/* MEDIA QUERIES (DESKTOP)            */
+/* Se aplican estilos ADICIONALES para pantallas más grandes */
+/* ------------------------------------ */
+
+@media (min-width: 1024px) {
+  header {
+    height: 51vh; /* Restaura la altura en desktop si es deseado */
+  }
+
+  /* --- Ícono de Hamburguesa (ocultar en desktop) --- */
+  .hamburger {
+    display: none;
+  }
+
+  /* --- Menú de Navegación Principal (mostrar en desktop horizontalmente) --- */
+  .nav-menu {
+    display: block; /* Usar block para contener la lista */
+    position: static;
+    height: auto;
+    overflow: visible;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+  }
+
+  .nav-menu ul {
+    display: flex; /* CAMBIO CLAVE: Ítems en fila para horizontal */
+    flex-direction: row; /* Asegura la fila */
+    width: auto;
+    padding: 0;
+    justify-content: flex-end; /* Alinea los ítems a la derecha si es necesario */
+    align-items: center; /* Centra verticalmente los ítems */
+  }
+
+  .nav-menu ul li {
+    margin-left: 20px;
+    border-bottom: none; /* Sin separador en desktop */
+    text-align: left;
+    padding: 0;
+  }
+
+  /* ESTILOS DE LOS ENLACES EN DESKTOP */
+  .nav-menu ul li a {
+    padding: 0.5rem 1rem; /* Padding para enlaces en desktop */
+    border-radius: 5px;
+    display: block;
+  }
+
+  /* Ocultar el mobile-trigger en desktop */
+  .mobile-submenu-trigger {
+      display: none;
+  }
+
+  /* Mostrar el link de desktop en desktop */
+  .desktop-submenu-link {
+      display: block; /* Mostrar el enlace */
+      padding: 0.5rem 1rem; /* MISMO PADDING que otros enlaces en desktop */
+      border-radius: 5px;
+      /* Añade hover effect */
+      transition: background-color 0.3s ease;
+  }
+  .desktop-submenu-link:hover {
+      background-color: rgba(255, 255, 255, 0.1); /* Efecto hover */
+  }
+
+  /* --- Ocultar el Checkbox del Submenú en Desktop --- */
+  .submenu-toggle {
+    display: none;
+  }
+
+  /* --- Estilos del Submenú (Desktop - con hover) --- */
+  .has-submenu .submenu-content {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posicionamiento absoluto respecto al padre (li) */
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 0; /* Se despliega debajo */
+    top: 100%; /* Justo debajo de la opción principal */
+    border-radius: 5px;
+    overflow: hidden; /* Asegurar que el contenido no se desborde al inicio */
+    transition: all 0.3s ease; /* Transición para un despliegue suave */
+  }
+
+  .has-submenu .submenu-content li a {
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: none;
+    transition: background-color 0.2s ease;
+  }
+  .has-submenu .submenu-content li a:hover {
+    background-color: #666;
+  }
+
+  /* Mostrar el submenú al pasar el ratón por encima de la opción principal en Desktop */
+  .has-submenu:hover .submenu-content {
+    display: block;
+    overflow: visible; /* Asegurar que el contenido sea visible una vez desplegado */
+  }
+
+  /* GRID DEL MAIN en desktop (sidebar y content uno al lado del otro) */
+  main {
+    display: grid;
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 250px 1fr; /* Sidebar fijo de 250px, content el resto */
+  }
+
+  .sidebar {
+    width: auto;
+    padding: 1rem;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+}
