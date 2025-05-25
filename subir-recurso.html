@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subir Nuevo Recurso | EduTec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="box-border p-0 m-0 bg-slate-200">
+    <header class="bg-[url(/img/portada.jpg)] bg-cover bg-center">
+      <div
+        class="relative flex justify-around items-center hover:bg-slate-700 border-b-2 hover:border-b-0 p-4 barra-sup"
+      >
+        <div class="text-white">
+          <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
+            <a href="index.html">📚 EduTec</a>
+          </h1>
+          <p class="text-base text-center font-semibold">
+            Portal de Mentes Brillantes
+          </p>
+        </div>
+        <section>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label>
+
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li class="has-submenu">
+                <input
+                  type="checkbox"
+                  id="submenu-toggle-productos"
+                  class="submenu-toggle"
+                />
+                <label
+                  for="submenu-toggle-productos"
+                  class="mobile-submenu-trigger"
+                >
+                  <span class="menu-item-text">Productos</span>
+                  <span class="submenu-arrow">▼</span>
+                </label>
+                <a href="#" class="desktop-submenu-link">Productos</a>
+                <ul class="submenu-content">
+                  <li><a href="#">Producto A</a></li>
+                  <li><a href="#">Producto B</a></li>
+                  <li><a href="#">Producto C</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Acerca de</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <div class="flex justify-center items-center text-white barra-central">
+        <h2 class="text-2xl text-center font-extrabold">
+          Cargar Nuevo Recurso Educativo
+        </h2>
+      </div>
+      <section
+        class="w-screen h-16 flex justify-between items-center text-base font-bold px-4 md:px-12 bg-slate-700 barra-buscar"
+      >
+        <a
+          href="index.html"
+          class="px-3 py-2 md:px-6 md:py-3 text-orange-300 duration-300 ease-linear hover:text-orange-500 hover:scale-125 text-sm md:text-base"
+        >
+          ← Volver a Recursos
+        </a>
+        <div></div>
+      </section>
+    </header>
+
+    <main class="main-layout flex justify-center py-8">
+      <div class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900 text-center">
+          Formulario de Carga de Recurso
+        </h2>
+
+        <form
+          id="resourceUploadForm"
+          action="#"
+          method="post"
+          class="space-y-6"
+        >
+          <div>
+            <label
+              for="title"
+              class="block text-lg font-medium text-gray-700 mb-1"
+              >Título del Recurso:</label
+            >
+            <input
+              type="text"
+              id="title"
+              name="title"
+              required
+              class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+              placeholder="Ej: Introducción a la Programación"
+            />
+          </div>
+
+          <div>
+            <label
+              for="category"
+              class="block text-lg font-medium text-gray-700 mb-1"
+              >Categoría:</label
+            >
+            <select
+              id="category"
+              name="category"
+              required
+              class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+            >
+              <option value="">Seleccione una categoría</option>
+              <option value="informatica">Informática/Tecnología</option>
+              <option value="matematicas">Matemáticas</option>
+              <option value="ciencias">Ciencias Naturales</option>
+              <option value="ciencias-sociales">Ciencias Sociales</option>
+              <option value="idiomas">Idiomas</option>
+              <option value="arte">Arte y Diseño</option>
+              <option value="humanidades">Humanidades</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="level"
+              class="block text-lg font-medium text-gray-700 mb-1"
+              >Nivel:</label
+            >
+            <select
+              id="level"
+              name="level"
+              required
+              class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+            >
+              <option value="">Seleccione el nivel</option>
+              <option value="basico">Básico</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="avanzado">Avanzado</option>
+              <option value="universitario">Universitario</option>
+              <option value="posgrado">Posgrado</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="authors"
+              class="block text-lg font-medium text-gray-700 mb-1"
+              >Autores:</label
+            >
+            <input
+              type="text"
+              id="authors"
+              name="authors"
+              required
+              class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+              placeholder="Ej: Juan Pérez, María Gómez"
+            />
+          </div>
+
+          <div>
+            <label
+              for="description"
+              class="block text-lg font-medium text-gray-700 mb-1"
+              >Breve Descripción del Material:</label
+            >
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              required
+              class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+              placeholder="Máximo 200 caracteres..."
+              maxlength="200"
+            ></textarea>
+          </div>
+
+          <div>
+            <label
+              for="materialType"
+              class="block text-lg font-medium text-gray-700 mb-1"
+              >Tipo de Material:</label
+            >
+            <select
+              id="materialType"
+              name="materialType"
+              required
+              class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+            >
+              <option value="">Seleccione el tipo</option>
+              <option value="pdf">PDF</option>
+              <option value="video">Video</option>
+              <option value="audio">Audio</option>
+              <option value="imagen">Imagen</option>
+              <option value="web">Página Web</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+
+          <div>
+            <label
+              for="resourceFile"
+              class="block text-lg font-medium text-gray-700 mb-2"
+              >Adjuntar Archivo del Recurso:</label
+            >
+            <input
+              type="file"
+              id="resourceFile"
+              name="resourceFile"
+              class="mt-1 block w-full text-base text-gray-900 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+            />
+            <p class="mt-1 text-sm text-gray-500 pt-4 font-bold">Nota:</p>
+            <p class="mt-1 text-sm text-gray-500">
+              Solo para demostración, el archivo no será realmente subido en
+              esta versión estática.
+            </p>
+          </div>
+
+          <div class="flex justify-center mt-8">
+            <button
+              type="submit"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-xl shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Subir Recurso
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer
+      class="w-screen bg-slate-800 flex justify-around items-center text-white p-4 md:p-8"
+    >
+      <div class="w-full text-center md:text-left">
+        <p>
+          &copy; 2023 📚 EduTec | Portal de Mentes Brillantes. Todos los
+          derechos reservados.
+        </p>
+        <nav class="menu-footer mt-2">
+          <ul
+            class="flex flex-col md:flex-row justify-center md:justify-start space-y-1 md:space-y-0 md:space-x-4"
+          >
+            <li>
+              <a href="politica-privacidad.html" class="hover:underline"
+                >Política de Privacidad</a
+              >
+            </li>
+            <li>
+              <a href="terminos-servicio.html" class="hover:underline"
+                >Términos de Servicio</a
+              >
+            </li>
+            <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("resourceUploadForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Previene el envío real del formulario (recarga de la página)
+
+          // Recoge los datos del formulario
+          const title = document.getElementById("title").value;
+          const category = document.getElementById("category").value;
+          const level = document.getElementById("level").value;
+          const authors = document.getElementById("authors").value;
+          const description = document.getElementById("description").value;
+          const materialType = document.getElementById("materialType").value;
+          const fileName = document.getElementById("resourceFile").files[0]
+            ? document.getElementById("resourceFile").files[0].name
+            : "Ningún archivo seleccionado";
+
+          // Muestra los datos (simula una "carga" exitosa)
+          alert(
+            `Recurso Enviado (Simulado):\n\n` +
+              `Título: ${title}\n` +
+              `Categoría: ${category}\n` +
+              `Nivel: ${level}\n` +
+              `Autores: ${authors}\n` +
+              `Descripción: ${description}\n` +
+              `Tipo de Material: ${materialType}\n` +
+              `Archivo: ${fileName}\n\n` +
+              `¡Gracias por tu aporte! En un sistema real, esta información se guardaría en una base de datos.`
+          );
+
+          // Opcional: limpiar el formulario después de la "carga"
+          this.reset();
+          window.location.href = "index.html"; // Redirigir a la página de inicio
+        });
+    </script>
+  </body>
+</html>

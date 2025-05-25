@@ -107,7 +107,7 @@ header {
 }
 
 /* CONTENEDOR MAIN */
-main {
+.main-index {
   grid-area: main;
   display: flex; /* En móvil, main será flexbox, con sidebar y content en columna */
   flex-direction: column;
@@ -169,22 +169,38 @@ a {
   height: 3px;
   background-color: rgb(253 186 116);
   transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 /* --- Estilos del Menú de Navegación Principal (Oculto por defecto en móvil) --- */
 .nav-menu {
   position: absolute;
-  top: 100%; /* Se despliega debajo de su contenedor padre con `position: relative` */
+  /* Se despliega debajo de su contenedor padre con `position: relative;
+  `*/
   left: 0;
+  top: 100%;
   width: 100%;
   background-color: #444;
-  flex-direction: column; /* Ítems apilados verticalmente por defecto */
-  display: none; /* OCULTAR EL MENÚ POR DEFECTO EN MÓVIL */
-  overflow-y: auto; /* Permite scroll si el contenido es demasiado largo */
-  max-height: calc(100vh - 100%); /* Altura máxima para evitar que se desborde */
-  transition: all 0.3s ease; /* Transición para que no aparezca de golpe */
+  /* Ítems apilados verticalmente por defecto */
+  flex-direction: column;
+  /* OCULTAR EL MENÚ POR DEFECTO EN MÓVIL */
+  display: none;
+  /* Permite scroll si el contenido es demasiado largo */
+  overflow-y: auto;
+  /* Altura máxima para evitar que se desborde */
+  max-height: calc(100vh - 100%);
+  /* Transición para que no aparezca de golpe */
+  transition: all 0.3s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1000; /* Asegurar que esté por encima de otros contenidos */
+  /*Asegurar que esté por encima de otros contenidos */
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .nav-menu ul {
@@ -219,12 +235,20 @@ a {
 /* Animación de las líneas de la hamburguesa */
 .menu-toggle:checked ~ .hamburger .line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -moz-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
 }
 .menu-toggle:checked ~ .hamburger .line:nth-child(2) {
   opacity: 0;
 }
 .menu-toggle:checked ~ .hamburger .line:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -moz-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
 }
 
 /* --- Submenú en Móvil (visible/desplegable por checkbox) --- */
@@ -350,12 +374,15 @@ a {
 
   /* Mostrar el link de desktop en desktop */
   .desktop-submenu-link {
-      display: block; /* Mostrar el enlace */
-      padding: 0.5rem 1rem; /* MISMO PADDING que otros enlaces en desktop */
-      border-radius: 5px;
-      /* Añade hover effect */
-      transition: background-color 0.3s ease;
-  }
+      display: block;
+      /*Mostrarelenlace*/padding: 0.5rem 1rem;
+      /*MISMOPADDINGqueotrosenlacesendesktop*/border-radius: 5px;
+      /*Añadehovereffect*/transition: background-color 0.3s ease;
+      -webkit-transition: background-color 0.3s ease;
+      -moz-transition: background-color 0.3s ease;
+      -ms-transition: background-color 0.3s ease;
+      -o-transition: background-color 0.3s ease;
+}
   .desktop-submenu-link:hover {
       background-color: rgba(255, 255, 255, 0.1); /* Efecto hover */
   }
@@ -367,18 +394,28 @@ a {
 
   /* --- Estilos del Submenú (Desktop - con hover) --- */
   .has-submenu .submenu-content {
-    display: none; /* Oculto por defecto */
-    position: absolute; /* Posicionamiento absoluto respecto al padre (li) */
+    /* Oculto por defecto */
+    display: none;
+    /* Posicionamiento absoluto respecto al padre(li) */
+    position: absolute;
     background-color: #444;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    left: 0; /* Se despliega debajo */
-    top: 100%; /* Justo debajo de la opción principal */
+    /* Se despliega debajo */
+    left: 0;
+    /* Justo debajo de la opción principal */
+    top: 100%;
     border-radius: 5px;
-    overflow: hidden; /* Asegurar que el contenido no se desborde al inicio */
-    transition: all 0.3s ease; /* Transición para un despliegue suave */
-  }
+    /* Asegurar que el contenido no se desborde al inicio */
+    overflow: hidden;
+    /* Transición para un despliegue suave */
+    transition: all 0.3s ease;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
 
   .has-submenu .submenu-content li a {
     color: white;
@@ -398,7 +435,7 @@ a {
   }
 
   /* GRID DEL MAIN en desktop (sidebar y content uno al lado del otro) */
-  main {
+  .main-index {
     display: grid;
     grid-template-areas: "sidebar content";
     grid-template-columns: 250px 1fr; /* Sidebar fijo de 250px, content el resto */
