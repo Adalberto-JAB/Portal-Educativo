@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tecnología | EduTec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="box-border p-0 m-0 bg-slate-200">
+    <header class="bg-[url(/img/portada.jpg)] bg-cover bg-center">
+      <div
+        class="relative flex justify-around items-center hover:bg-slate-700 border-b-2 hover:border-b-0 p-4 barra-sup"
+      >
+        <div class="text-white">
+          <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
+            <a href="index.html">📚 EduTec</a>
+          </h1>
+          <p class="text-base text-center font-semibold">
+            Portal de Mentes Brillantes
+          </p>
+        </div>
+        <section>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label>
+
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="./index.html">Inicio</a></li>
+              <li class="has-submenu">
+                <input
+                  type="checkbox"
+                  id="submenu-toggle-productos"
+                  class="submenu-toggle"
+                />
+
+                <label
+                  for="submenu-toggle-productos"
+                  class="mobile-submenu-trigger"
+                >
+                  <span class="menu-item-text">Categorías</span>
+                  <span class="submenu-arrow">▼</span>
+                </label>
+
+                <a href="#" class="desktop-submenu-link">Categorías</a>
+
+                <ul class="submenu-content">
+                  <li><a href="./paginas/ciencia.html">Ciencia</a></li>
+                  <li><a href="./paginas/tecnologia.html">Tecnología</a></li>
+                  <li><a href="./paginas/humanidades.html">Humanidades</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <div class="flex justify-center items-center text-white barra-central">
+        <h2 class="text-2xl text-center font-extrabold">
+          Sumérgete en el Mundo de la Tecnología
+        </h2>
+      </div>
+      <section
+        class="w-screen h-16 flex justify-between items-center text-base font-bold px-4 md:px-12 bg-slate-700 barra-buscar"
+      >
+        <div class="text-white">
+          <form action="../resultados-busqueda.html" method="get" class="barra-busqueda flex items-center">
+            <input
+              type="text"
+              name="q"
+              placeholder="Buscar por tema, autor, palabra clave..."
+              aria-label="Buscar recursos"
+              class="w-40 md:w-96 text-black px-1 font-semibold"
+            />
+            <button
+              type="submit"
+              class="mx-4 text-orange-300 duration-300 ease-linear hover:scale-125 hover:text-orange-500 text-sm md:text-base"
+            >
+              Buscar
+            </button>
+          </form>
+        </div>
+        <div>
+          <a href="../subir-recurso.html"
+            class="px-3 py-2 md:px-6 md:py-3 text-orange-300 duration-300 ease-linear hover:text-orange-500 hover:scale-125 text-sm md:text-base"
+          >
+            Subir Recurso
+          </a>
+        </div>
+      </section>
+    </header>
+
+    <main class="main-layout">
+      <div class="main-content bg-white p-6 md:p-8">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900">
+          La Tecnología al Servicio del Aprendizaje
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          La tecnología impulsa la innovación y transforma el mundo a nuestro
+          alrededor. Desde el desarrollo de software y la inteligencia
+          artificial, hasta la ciberseguridad, la robótica y la nanotecnología.
+          Esta sección ofrece recursos para comprender las herramientas y los
+          conceptos que están dando forma al futuro, permitiéndote no solo usar
+          la tecnología, sino también crearla y adaptarla a tus necesidades.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Recursos Destacados en Tecnología:</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                <h4 class="text-xl font-semibold mb-2">Fundamentos de la Inteligencia Artificial</h4>
+                <p class="text-sm text-gray-600 mb-2">Categoría: IA | Nivel: Intermedio</p>
+                <p class="text-gray-700 text-sm">Explora los algoritmos y principios básicos de la IA, desde el aprendizaje automático hasta las redes neuronales.</p>
+                <a href="../detalle-recurso.html" class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm">Ver más</a>
+            </article>
+
+            <article class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                <h4 class="text-xl font-semibold mb-2">Introducción a la Ciberseguridad</h4>
+                <p class="text-sm text-gray-600 mb-2">Categoría: Seguridad Informática | Nivel: Básico</p>
+                <p class="text-gray-700 text-sm">Aprende sobre amenazas comunes, protección de datos y mejores prácticas para mantenerte seguro en línea.</p>
+                <a href="../detalle-recurso.html" class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm">Ver más</a>
+            </article>
+
+            <article class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                <h4 class="text-xl font-semibold mb-2">Desarrollo Web Moderno con React</h4>
+                <p class="text-sm text-gray-600 mb-2">Categoría: Desarrollo Web | Nivel: Avanzado</p>
+                <p class="text-gray-700 text-sm">Guía para construir interfaces de usuario dinámicas y eficientes utilizando la biblioteca de JavaScript React.</p>
+                <a href="../detalle-recurso.html" class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm">Ver más</a>
+            </article>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="w-screen bg-slate-800 flex justify-around items-center text-white p-4 md:p-8"
+    >
+      <div class="w-full text-center md:text-left">
+        <p>
+          &copy; 2023 📚 EduTec | Portal de Mentes Brillantes. Todos los
+          derechos reservados.
+        </p>
+        <nav class="menu-footer mt-2">
+          <ul class="flex flex-col md:flex-row justify-center md:justify-start space-y-1 md:space-y-0 md:space-x-4">
+            <li>
+              <a href="../politica-privacidad.html" class="hover:underline">Política de Privacidad</a>
+            </li>
+            <li><a href="../terminos-servicio.html" class="hover:underline">Términos de Servicio</a></li>
+            <li><a href="../faq.html" class="hover:underline">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
+
