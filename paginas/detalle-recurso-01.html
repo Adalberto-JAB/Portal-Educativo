@@ -7,16 +7,18 @@
       Detalle del Recurso: Metodologías de la Ingeniería del Software
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body class="box-border p-0 m-0 bg-slate-200">
-    <header class="bg-[url(/img/portada.jpg)] bg-cover bg-center">
+    <header
+      class="font-[Montserrat] bg-[url(/img/portada.jpg)] bg-cover bg-center header-pagina"
+    >
       <div
-        class="relative flex justify-around items-center hover:bg-slate-700 border-b-2 hover:border-b-0 p-4 barra-sup"
+        class="relative flex justify-around items-center hover:bg-blue-800 border-b-2 hover:border-b-0 p-4 barra-sup"
       >
         <div class="text-white">
           <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
-            <a href="index.html">📚 EduTec</a>
+            <a href="../index.html">📚 EduTec</a>
           </h1>
           <p class="text-base text-center font-semibold">
             Portal de Mentes Brillantes
@@ -32,8 +34,8 @@
 
           <nav class="nav-menu">
             <ul>
-              <li><a href="./index.html">Inicio</a></li>
-              <li><a href="./biblioteca.html">Biblioteca</a></li>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="../biblioteca.html">Biblioteca</a></li>
               <li class="has-submenu">
                 <input
                   type="checkbox"
@@ -52,9 +54,10 @@
                 <a href="#" class="desktop-submenu-link">Categorías</a>
 
                 <ul class="submenu-content">
-                  <li><a href="./paginas/ciencia.html">Ciencia</a></li>
-                  <li><a href="./paginas/tecnologia.html">Tecnología</a></li>
-                  <li><a href="./paginas/humanidades.html">Humanidades</a></li>
+                  <li><a href="ciencia.html">Ciencia</a></li>
+                  <li><a href="tecnologia.html">Tecnología</a></li>
+                  <li><a href="humanidades.html">Humanidades</a></li>
+                  <li><a href="filtros-materias.html">Otras</a></li>
                 </ul>
               </li>
               <li><a href="#">Nosotros</a></li>
@@ -64,25 +67,10 @@
         </section>
       </div>
       <div class="flex justify-center items-center text-white barra-central">
-        <h2 class="text-2xl text-center font-extrabold">Detalle del Recurso</h2>
+        <h2 class="text-2xl lg:text-6xl text-center font-extrabold my-8">
+          Detalle del Recurso
+        </h2>
       </div>
-      <section
-        class="w-screen h-16 flex justify-between items-center text-base font-bold px-4 md:px-12 bg-slate-700 barra-buscar"
-      >
-        <a
-          href="index.html"
-          class="px-3 py-2 md:px-6 md:py-3 text-orange-300 duration-300 ease-linear hover:text-orange-500 hover:scale-125 text-sm md:text-base"
-        >
-          ← Volver a Recursos
-        </a>
-        <div>
-          <button
-            class="px-3 py-2 md:px-6 md:py-3 text-orange-300 duration-300 ease-linear hover:text-orange-500 hover:scale-125 text-sm md:text-base"
-          >
-            Subir Recurso
-          </button>
-        </div>
-      </section>
     </header>
 
     <main class="w-screen flex justify-center py-8">
@@ -131,29 +119,21 @@
       </div>
     </main>
 
-    <footer
-      class="w-screen bg-slate-800 flex justify-around items-center text-white p-4 md:p-8"
-    >
-      <div class="w-full text-center md:text-left">
+    <footer class="w-screen bg-slate-800">
+      <div
+        class="w-screen py-4 px-28 flex justify-around items-center text-white"
+      >
         <p>
-          &copy; 2023 📚 EduTec | Portal de Mentes Brillantes. Todos los
+          &copy; 2025 📚 EduTec | Portal de Mentes Brillantes. Todos los
           derechos reservados.
         </p>
-        <nav class="menu-footer mt-2">
-          <ul
-            class="flex flex-col md:flex-row justify-center md:justify-start space-y-1 md:space-y-0 md:space-x-4"
-          >
+        <nav class="menu-footer">
+          <ul>
             <li>
-              <a href="politica-privacidad.html" class="hover:underline"
-                >Política de Privacidad</a
-              >
+              <a href="#">Política de Privacidad</a>
             </li>
-            <li>
-              <a href="terminos-servicio.html" class="hover:underline"
-                >Términos de Servicio</a
-              >
-            </li>
-            <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+            <li><a href="#">Términos de Servicio</a></li>
+            <li><a href="#">FAQ</a></li>
           </ul>
         </nav>
       </div>

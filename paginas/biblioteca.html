@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca de Materias | EduTec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="box-border p-0 m-0 bg-slate-200">
+    <header
+      class="font-[Montserrat] bg-[url(/img/portada.jpg)] bg-cover bg-center header-pagina"
+    >
+      <div
+        class="relative flex justify-around items-center hover:bg-blue-800 border-b-2 hover:border-b-0 p-4 barra-sup"
+      >
+        <div class="text-white">
+          <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
+            <a href="../index.html">📚 EduTec</a>
+          </h1>
+          <p class="text-base text-center font-semibold">
+            Portal de Mentes Brillantes
+          </p>
+        </div>
+        <section>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label>
+
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="biblioteca.html">Biblioteca</a></li>
+              <li class="has-submenu">
+                <input
+                  type="checkbox"
+                  id="submenu-toggle-productos"
+                  class="submenu-toggle"
+                />
+
+                <label
+                  for="submenu-toggle-productos"
+                  class="mobile-submenu-trigger"
+                >
+                  <span class="menu-item-text">Categorías</span>
+                  <span class="submenu-arrow">▼</span>
+                </label>
+
+                <a href="#" class="desktop-submenu-link">Categorías</a>
+
+                <ul class="submenu-content">
+                  <li><a href="ciencia.html">Ciencia</a></li>
+                  <li><a href="tecnologia.html">Tecnología</a></li>
+                  <li><a href="humanidades.html">Humanidades</a></li>
+                  <li><a href="filtros-materias.html">Otras</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <div class="flex justify-center items-center text-white barra-central">
+        <h2 class="text-2xl lg:text-6xl text-center font-extrabold my-8">
+          Biblioteca de Materias
+        </h2>
+      </div>
+    </header>
+    
+    <main class="main-layout-biblioteca">
+      <aside class="sidebar-biblioteca bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900">Materias</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="#introduccion-pensamiento" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Introducción al Pensamiento Computacional y Lógica
+            </a>
+          </li>
+          <li>
+            <a href="#diseno-web" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Diseño Web
+            </a>
+          </li>
+          <li>
+            <a href="#diseno-interfaces" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Diseño de Interfaces y Experiencias de Usuario
+            </a>
+          </li>
+          <li>
+            <a href="#introduccion-desarrollo-agil" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Introducción al Desarrollo Ágil de Software
+            </a>
+          </li>
+          <li>
+            <a href="#programacion-i" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Programación I
+            </a>
+          </li>
+          <li>
+            <a href="#control-versiones" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Control de Versiones y Colaboración en Desarrollo de Software
+            </a>
+          </li>
+          <li>
+            <a href="#etica-legislacion" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Ética y Legislación en el Diseño de Software
+            </a>
+          </li>
+          <li>
+            <a href="#sistemas-operativos" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Sistemas Operativos y Fundamentos de Redes
+            </a>
+          </li>
+          <li>
+            <a href="#ingles-1er-nivel" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Inglés 1er Nivel
+            </a>
+          </li>
+          <li>
+            <a href="#ingles-2do-nivel" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Inglés 2do Nivel
+            </a>
+          </li>
+          <li>
+            <a href="#programacion-ii" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Programación II
+            </a>
+          </li>
+          <li>
+            <a href="#base-de-datos" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Base de Datos
+            </a>
+          </li>
+          <li>
+            <a href="#calidad-pruebas" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Calidad y Pruebas de Software
+            </a>
+          </li>
+          <li>
+            <a href="#emprendimiento-marketing" class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out">
+              Emprendimiento y Marketing en la Industria del Software
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="content-biblioteca">
+        <div class="flex items-center mb-6 bg-white p-3 rounded-lg shadow-md">
+          <div class="relative w-full">
+            <input
+              type="text"
+              id="global-search-input"
+              placeholder="Buscar por materia, tema o palabra clave..."
+              class="w-full p-3 pl-10 pr-20 text-base border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <svg
+              class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+          <button
+            id="filter-button"
+            class="ml-3 p-3 bg-gray-100 rounded-md hover:bg-gray-200 transition duration-200 ease-in-out flex items-center justify-center text-gray-600"
+            title="Filtros de búsqueda"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <section id="introduccion-pensamiento" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="1" data-quarter="1">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Introducción al Pensamiento Computacional y Lógica</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Pensamiento Computacional" data-description="Principios fundamentales del pensamiento computacional.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Pensamiento Computacional</h4>
+              <p class="text-sm text-gray-600 mb-3">Principios fundamentales del pensamiento computacional y su aplicación en la resolución de problemas.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 1 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Resolución de Problemas y Algoritmos" data-description="Diseño y análisis de algoritmos eficientes.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Resolución de Problemas y Algoritmos</h4>
+              <p class="text-sm text-gray-600 mb-3">Técnicas para el diseño y análisis de algoritmos eficientes y su implementación.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 1 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="diseno-web" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="1" data-quarter="2">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Diseño Web</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="HTML y CSS Avanzado" data-description="Guía completa de HTML5 y CSS3">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">HTML y CSS Avanzado</h4>
+              <p class="text-sm text-gray-600 mb-3">Guía completa de HTML5 y CSS3 para el desarrollo de interfaces web responsivas.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 1 | Cuatrimestre: 2</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="JavaScript Fundamental" data-description="Introducción a la programación interactiva web.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">JavaScript Fundamental</h4>
+              <p class="text-sm text-gray-600 mb-3">Introducción a la programación interactiva web con JavaScript, manipulación del DOM y eventos.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 1 | Cuatrimestre: 2</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="diseno-interfaces" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="2" data-quarter="1">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Diseño de Interfaces y Experiencias de Usuario</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Principios de UX/UI" data-description="Diseño centrado en el usuario.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Principios de UX/UI</h4>
+              <p class="text-sm text-gray-600 mb-3">Exploración de los principios fundamentales de User Experience (UX) y User Interface (UI) design.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 2 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="introduccion-desarrollo-agil" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="2" data-quarter="1">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Introducción al Desarrollo Ágil de Software</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Metodologías Tradicionales y Ágiles" data-description="Comparativa y aplicación de metodologías.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Metodologías Tradicionales y Ágiles</h4>
+              <p class="text-sm text-gray-600 mb-3">Comparativa entre metodologías de desarrollo tradicionales y ágiles, sus principios y aplicaciones.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 2 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Gestión Ágil de Proyectos" data-description="Herramientas y técnicas de gestión Scrum.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Gestión Ágil de Proyectos</h4>
+              <p class="text-sm text-gray-600 mb-3">Herramientas y técnicas para la gestión de proyectos de software bajo metodologías ágiles como Scrum.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 2 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+        
+        <section id="programacion-i" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="1" data-quarter="1">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Programación I</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Fundamentos de Python" data-description="Primeros pasos en la programación con Python">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Fundamentos de Python</h4>
+              <p class="text-sm text-gray-600 mb-3">Introducción a la sintaxis y estructuras básicas de Python, ideal para principiantes.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 1 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="control-versiones" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="2" data-quarter="2">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Control de Versiones y Colaboración en Desarrollo de Software</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Introducción a Git y GitHub" data-description="Colaboración eficiente con sistemas de control de versiones.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Introducción a Git y GitHub</h4>
+              <p class="text-sm text-gray-600 mb-3">Aprende a usar Git para el control de versiones y GitHub para la colaboración en proyectos de software.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 2 | Cuatrimestre: 2</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="etica-legislacion" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="2" data-quarter="2">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Ética y Legislación en el Diseño de Software</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Propiedad Intelectual y Software" data-description="Derechos de autor y licencias en el software.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Propiedad Intelectual y Software</h4>
+              <p class="text-sm text-gray-600 mb-3">Un estudio sobre derechos de autor, patentes y licencias de software en el ámbito digital.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 2 | Cuatrimestre: 2</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="sistemas-operativos" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="2" data-quarter="2">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Sistemas Operativos y Fundamentos de Redes</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Principios de Sistemas Operativos" data-description="Funcionamiento interno y gestión de recursos.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Principios de Sistemas Operativos</h4>
+              <p class="text-sm text-gray-600 mb-3">Explora el funcionamiento interno de los sistemas operativos, desde la gestión de procesos hasta la memoria.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 2 | Cuatrimestre: 2</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Redes de Computadoras Básicas" data-description="Configuración y protocolos de red.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Redes de Computadoras Básicas</h4>
+              <p class="text-sm text-gray-600 mb-3">Una guía introductoria a las redes de computadoras, topologías, protocolos y configuración básica.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 2 | Cuatrimestre: 2</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="ingles-1er-nivel" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="1" data-quarter="1">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Inglés 1er Nivel</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Gramática Fundamental de Inglés" data-description="Conceptos básicos de inglés para desarrollo de software.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Gramática Fundamental de Inglés</h4>
+              <p class="text-sm text-gray-600 mb-3">Conceptos básicos de gramática inglesa esenciales para la lectura de documentación técnica en desarrollo de software.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 1 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="ingles-2do-nivel" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="1" data-quarter="2">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Inglés 2do Nivel</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Inglés Técnico para TI" data-description="Vocabulario especializado y lectura de documentos.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Inglés Técnico para TI</h4>
+              <p class="text-sm text-gray-600 mb-3">Desarrolla habilidades en el vocabulario técnico y la lectura de documentos en inglés, crucial para la industria tecnológica.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 1 | Cuatrimestre: 2</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="programacion-ii" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="2" data-quarter="1">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Programación II</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Programación Orientada a Objetos" data-description="Conceptos avanzados de OOP con ejemplos prácticos.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Programación Orientada a Objetos</h4>
+              <p class="text-sm text-gray-600 mb-3">Profundiza en los conceptos de la Programación Orientada a Objetos con ejemplos prácticos en lenguajes modernos.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 2 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="base-de-datos" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="2" data-quarter="1">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Base de Datos</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Modelado y Diseño de Bases de Datos" data-description="Diseño de esquemas y normalización.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Modelado y Diseño de Bases de Datos</h4>
+              <p class="text-sm text-gray-600 mb-3">Aprende a diseñar esquemas de bases de datos relacionales, normalización y optimización de consultas SQL.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 2 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="calidad-pruebas" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="3" data-quarter="1">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Calidad y Pruebas de Software</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Principios de Pruebas de Software" data-description="Introducción a metodologías y tipos de pruebas.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Principios de Pruebas de Software</h4>
+              <p class="text-sm text-gray-600 mb-3">Introducción a las metodologías de pruebas, tipos de pruebas (unitarias, integración, sistema) y herramientas.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 3 | Cuatrimestre: 1</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="emprendimiento-marketing" class="mb-8 p-6 bg-white rounded-lg shadow-lg material-section" data-year="3" data-quarter="2">
+          <h3 class="text-3xl font-bold mb-5 text-blue-800">Emprendimiento y Marketing en la Industria del Software</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Desarrollo de Modelos de Negocio" data-description="Creación y validación de ideas de negocio.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Desarrollo de Modelos de Negocio</h4>
+              <p class="text-sm text-gray-600 mb-3">Guía para crear y validar modelos de negocio innovadores en el sector tecnológico.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 3 | Cuatrimestre: 2</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+            <article class="bg-blue-50 p-5 rounded-lg shadow-sm border border-blue-200 material-card" data-title="Estrategias de Marketing Digital" data-description="Promoción de productos de software en el mercado.">
+              <h4 class="text-xl font-semibold mb-2 text-blue-700">Estrategias de Marketing Digital</h4>
+              <p class="text-sm text-gray-600 mb-3">Técnicas de marketing digital aplicadas a la promoción de productos y servicios de software.</p>
+              <div class="flex justify-between items-center mt-auto">
+                <span class="text-xs font-medium text-blue-500">Año: 3 | Cuatrimestre: 2</span>
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </section>
+        </div>
+    </main>
+
+    <div id="filter-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 class="text-2xl font-bold mb-4">Filtros de búsqueda</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <h4 class="text-lg font-semibold mb-2">Año de la materia</h4>
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="year" value="1" class="form-checkbox h-5 w-5 text-blue-600" />
+                <span class="ml-2 text-gray-700">Primer año</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="year" value="2" class="form-checkbox h-5 w-5 text-blue-600" />
+                <span class="ml-2 text-gray-700">Segundo año</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="year" value="3" class="form-checkbox h-5 w-5 text-blue-600" />
+                <span class="ml-2 text-gray-700">Tercer año</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-2">Cuatrimestre de cursado</h4>
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="quarter" value="1" class="form-checkbox h-5 w-5 text-blue-600" />
+                <span class="ml-2 text-gray-700">Primer cuatrimestre</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="quarter" value="2" class="form-checkbox h-5 w-5 text-blue-600" />
+                <span class="ml-2 text-gray-700">Segundo cuatrimestre</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end mt-6">
+          <button id="apply-filters-button" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition duration-200 ease-in-out">
+            Aplicar Filtros
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="w-screen bg-slate-800">
+      <div
+        class="w-screen py-4 px-28 flex justify-around items-center text-white"
+      >
+        <p>
+          &copy; 2025 📚 EduTec | Portal de Mentes Brillantes. Todos los
+          derechos reservados.
+        </p>
+        <nav class="menu-footer">
+          <ul>
+            <li>
+              <a href="#">Política de Privacidad</a>
+            </li>
+            <li><a href="#">Términos de Servicio</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const filterButton = document.getElementById('filter-button');
+        const filterModal = document.getElementById('filter-modal');
+        const closeButton = document.querySelector('.close-button');
+        const applyFiltersButton = document.getElementById('apply-filters-button');
+        const globalSearchInput = document.getElementById('global-search-input');
+        const materialSections = document.querySelectorAll('.material-section');
+        const materialCards = document.querySelectorAll('.material-card');
+
+        // Función para abrir la modal
+        if (filterButton) {
+          filterButton.addEventListener('click', function () {
+            filterModal.style.display = 'flex'; // Usar flex para centrar
+          });
+        }
+
+        // Función para cerrar la modal
+        if (closeButton) {
+          closeButton.addEventListener('click', function () {
+            filterModal.style.display = 'none';
+          });
+        }
+
+        // Cerrar modal al hacer clic fuera de ella
+        window.addEventListener('click', function (event) {
+          if (event.target == filterModal) {
+            filterModal.style.display = 'none';
+          }
+        });
+
+        // Función para aplicar filtros y búsqueda
+        const applyFiltersAndSearch = () => {
+          const selectedYears = Array.from(document.querySelectorAll('input[name="year"]:checked')).map(cb => cb.value);
+          const selectedQuarters = Array.from(document.querySelectorAll('input[name="quarter"]:checked')).map(cb => cb.value);
+          const searchTerm = globalSearchInput.value.toLowerCase().trim();
+
+          materialSections.forEach(section => {
+            const sectionYear = section.dataset.year;
+            const sectionQuarter = section.dataset.quarter;
+            let sectionVisible = false;
+
+            section.querySelectorAll('.material-card').forEach(card => {
+              const cardTitle = card.dataset.title.toLowerCase();
+              const cardDescription = card.dataset.description.toLowerCase();
+              const cardTextContent = card.textContent.toLowerCase(); // Para buscar en todo el texto visible de la card
+
+              const matchesSearch = searchTerm === '' || 
+                                    cardTitle.includes(searchTerm) || 
+                                    cardDescription.includes(searchTerm) ||
+                                    cardTextContent.includes(searchTerm);
+
+              const matchesYear = selectedYears.length === 0 || selectedYears.includes(sectionYear);
+              const matchesQuarter = selectedQuarters.length === 0 || selectedQuarters.includes(sectionQuarter);
+
+              if (matchesSearch && matchesYear && matchesQuarter) {
+                card.style.display = 'block'; // Muestra la tarjeta
+                sectionVisible = true;
+              } else {
+                card.style.display = 'none'; // Oculta la tarjeta
+              }
+            });
+
+            if (sectionVisible) {
+              section.style.display = 'block'; // Muestra la sección si al menos una tarjeta es visible
+            } else {
+              section.style.display = 'none'; // Oculta la sección si ninguna tarjeta es visible
+            }
+          });
+        };
+
+        // Event listener para el botón de aplicar filtros
+        if (applyFiltersButton) {
+          applyFiltersButton.addEventListener('click', function () {
+            applyFiltersAndSearch();
+            filterModal.style.display = 'none'; // Cerrar la modal después de aplicar
+          });
+        }
+
+        // Event listener para la búsqueda en tiempo real (opcional, si no quieres aplicar solo con botón)
+        if (globalSearchInput) {
+          globalSearchInput.addEventListener('keyup', applyFiltersAndSearch);
+        }
+
+        // JavaScript para desplazar la vista al hacer clic en las categorías de la barra lateral
+        document.querySelectorAll('.sidebar-biblioteca ul li a').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 100, // Ajusta 100px para que no quede pegado al header
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // Asegurarse de que todas las tarjetas y secciones sean visibles al cargar la página inicialmente
+        applyFiltersAndSearch(); // Llama a la función al cargar para mostrar todo por defecto
+      });
+    </script>
+  </body>
+</html>

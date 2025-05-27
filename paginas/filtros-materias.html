@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materias | EduTec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="box-border p-0 m-0 bg-slate-200">
+    <header
+      class="font-[Montserrat] bg-[url(/img/portada.jpg)] bg-cover bg-center header-pagina"
+    >
+      <div
+        class="relative flex justify-around items-center hover:bg-blue-800 border-b-2 hover:border-b-0 p-4 barra-sup"
+      >
+        <div class="text-white">
+          <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
+            <a href="../index.html">📚 EduTec</a>
+          </h1>
+          <p class="text-base text-center font-semibold">
+            Portal de Mentes Brillantes
+          </p>
+        </div>
+        <section>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label>
+
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="biblioteca.html">Biblioteca</a></li>
+              <li class="has-submenu">
+                <input
+                  type="checkbox"
+                  id="submenu-toggle-productos"
+                  class="submenu-toggle"
+                />
+
+                <label
+                  for="submenu-toggle-productos"
+                  class="mobile-submenu-trigger"
+                >
+                  <span class="menu-item-text">Categorías</span>
+                  <span class="submenu-arrow">▼</span>
+                </label>
+
+                <a href="#" class="desktop-submenu-link">Categorías</a>
+
+                <ul class="submenu-content">
+                  <li><a href="ciencia.html">Ciencia</a></li>
+                  <li><a href="tecnologia.html">Tecnología</a></li>
+                  <li><a href="humanidades.html">Humanidades</a></li>
+                  <li><a href="filtros-materias.html">Otras</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <div class="flex justify-center items-center text-white barra-central">
+        <h2 class="text-2xl lg:text-6xl text-center font-extrabold my-8">
+          Explora por Materias
+        </h2>
+      </div>
+    </header>
+    
+    <main class="main-layout flex justify-center py-8">
+      <div
+        class="w-full max-w-6xl bg-white p-8 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <div class="md:col-span-1 border-r md:border-r-0 md:pr-4">
+          <h2 class="text-2xl font-bold mb-6 text-gray-900">Materias</h2>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#matematicas"
+                class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out"
+              >
+                Matemáticas
+              </a>
+            </li>
+            <li>
+              <a
+                href="#programacion"
+                class="block p-3 text-lg font-medium bg-orange-200 text-orange-700 rounded-md"
+              >
+                Programación
+              </a>
+            </li>
+            <li>
+              <a
+                href="#diseno-software"
+                class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out"
+              >
+                Diseño de Software
+              </a>
+            </li>
+            <li>
+              <a
+                href="#redes"
+                class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out"
+              >
+                Redes
+              </a>
+            </li>
+            <li>
+              <a
+                href="#ciencias"
+                class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out"
+              >
+                Ciencias
+              </a>
+            </li>
+            <li>
+              <a
+                href="#humanidades"
+                class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out"
+              >
+                Humanidades
+              </a>
+            </li>
+            <li>
+              <a
+                href="./detalle-recurso-01.html"
+                class="block p-3 text-lg font-medium text-gray-700 hover:bg-blue-100 hover:text-blue-700 rounded-md transition duration-200 ease-in-out"
+              >
+                Otros
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <div
+            class="mb-6 flex items-center border border-gray-300 rounded-md p-2"
+          >
+            <input
+              type="text"
+              id="search-materia-input"
+              placeholder="Buscar en esta materia..."
+              class="flex-grow p-2 text-base outline-none"
+            />
+            <button
+              type="button"
+              class="ml-2 p-2 text-blue-600 hover:text-blue-800 transition duration-200 ease-in-out"
+              onclick="filterMaterials()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <section
+            id="matematicas"
+            class="mb-8 p-4 border rounded-lg bg-blue-50"
+          >
+            <h3 class="text-2xl font-bold mb-4 text-blue-800">Matemáticas</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <article
+                class="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between resource-item"
+                data-title="Algebra Lineal"
+                data-category="Matemáticas"
+                data-description="Apuntes sobre vectores, matrices y espacios vectoriales"
+              >
+                <div>
+                  <h4 class="text-xl font-semibold mb-1">Álgebra Lineal</h4>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Apuntes sobre vectores, matrices y espacios vectoriales
+                  </p>
+                  <p class="text-xs text-blue-700">Matemáticas</p>
+                </div>
+                <div class="flex justify-end mt-3">
+                  <a
+                    href="detalle-recurso.html"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Ver más</a
+                  >
+                  <button class="ml-4 text-gray-400 hover:text-gray-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between resource-item"
+                data-title="Cálculo Diferencial"
+                data-category="Matemáticas"
+                data-description="Material de estudio sobre límites y derivadas"
+              >
+                <div>
+                  <h4 class="text-xl font-semibold mb-1">
+                    Cálculo Diferencial
+                  </h4>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Material de estudio sobre límites y derivadas
+                  </p>
+                  <p class="text-xs text-blue-700">Matemáticas</p>
+                </div>
+                <div class="flex justify-end mt-3">
+                  <a
+                    href="detalle-recurso.html"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Ver más</a
+                  >
+                  <button class="ml-4 text-gray-400 hover:text-gray-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section
+            id="programacion"
+            class="mb-8 p-4 border rounded-lg bg-orange-50"
+          >
+            <h3 class="text-2xl font-bold mb-4 text-orange-800">
+              Programación
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <article
+                class="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between resource-item"
+                data-title="Introduccion a la Programación"
+                data-category="Programación"
+                data-description="Conceptos basicos de programación y algoritmos"
+              >
+                <div>
+                  <h4 class="text-xl font-semibold mb-1">
+                    Introducción a la Programación
+                  </h4>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Conceptos básicos de programación y algoritmos
+                  </p>
+                  <p class="text-xs text-orange-700">Programación</p>
+                </div>
+                <div class="flex justify-end mt-3">
+                  <a
+                    href="detalle-recurso.html"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Ver más</a
+                  >
+                  <button class="ml-4 text-gray-400 hover:text-gray-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between resource-item"
+                data-title="Estructuras de Datos"
+                data-category="Programación"
+                data-description="Introducción al proceso de estructuras de datos"
+              >
+                <div>
+                  <h4 class="text-xl font-semibold mb-1">
+                    Estructuras de Datos
+                  </h4>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Introducción al proceso de estructuras de datos
+                  </p>
+                  <p class="text-xs text-orange-700">Programación</p>
+                </div>
+                <div class="flex justify-end mt-3">
+                  <a
+                    href="detalle-recurso.html"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Ver más</a
+                  >
+                  <button class="ml-4 text-gray-400 hover:text-gray-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section
+            id="diseno-software"
+            class="mb-8 p-4 border rounded-lg bg-green-50"
+          >
+            <h3 class="text-2xl font-bold mb-4 text-green-800">
+              Diseño de Software
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <article
+                class="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between resource-item"
+                data-title="Ingeniería de Requisitos"
+                data-category="Diseño de Software"
+                data-description="Introducción al proceso de requisitos de software"
+              >
+                <div>
+                  <h4 class="text-xl font-semibold mb-1">
+                    Ingeniería de Requisitos
+                  </h4>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Introducción al proceso de requisitos de software
+                  </p>
+                  <p class="text-xs text-green-700">Diseño de Software</p>
+                </div>
+                <div class="flex justify-end mt-3">
+                  <a
+                    href="detalle-recurso.html"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Ver más</a
+                  >
+                  <button class="ml-4 text-gray-400 hover:text-gray-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section id="redes" class="mb-8 p-4 border rounded-lg bg-purple-50">
+            <h3 class="text-2xl font-bold mb-4 text-purple-800">Redes</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <article
+                class="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between resource-item"
+                data-title="Bases de Datos Relacionales"
+                data-category="Redes"
+                data-description="Guía sobre los fundamentos de bases de datos"
+              >
+                <div>
+                  <h4 class="text-xl font-semibold mb-1">
+                    Bases de Datos Relacionales
+                  </h4>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Guía sobre los fundamentos de bases de datos
+                  </p>
+                  <p class="text-xs text-purple-700">Redes</p>
+                </div>
+                <div class="flex justify-end mt-3">
+                  <a
+                    href="detalle-recurso.html"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Ver más</a
+                  >
+                  <button class="ml-4 text-gray-400 hover:text-gray-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between resource-item"
+                data-title="Principios de Redes"
+                data-category="Redes"
+                data-description="Fundamentos y prácticas de redes de computadoras"
+              >
+                <div>
+                  <h4 class="text-xl font-semibold mb-1">
+                    Principios de Redes
+                  </h4>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Fundamentos y prácticas de redes de computadoras
+                  </p>
+                  <p class="text-xs text-purple-700">Redes</p>
+                </div>
+                <div class="flex justify-end mt-3">
+                  <a
+                    href="detalle-recurso.html"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Ver más</a
+                  >
+                  <button class="ml-4 text-gray-400 hover:text-gray-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between resource-item"
+                data-title="Inseguridad en Redes"
+                data-category="Redes"
+                data-description="Descripción de riesgos y medidas de software"
+              >
+                <div>
+                  <h4 class="text-xl font-semibold mb-1">
+                    Inseguridad en Redes
+                  </h4>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Descripción de riesgos y medidas de software
+                  </p>
+                  <p class="text-xs text-purple-700">Redes</p>
+                </div>
+                <div class="flex justify-end mt-3">
+                  <a
+                    href="detalle-recurso.html"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Ver más</a
+                  >
+                  <button class="ml-4 text-gray-400 hover:text-gray-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+              <article
+                class="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between resource-item"
+                data-title="Seguridad en Redes"
+                data-category="Redes"
+                data-description="Descripción de riesgos de seguridad en Redes"
+              >
+                <div>
+                  <h4 class="text-xl font-semibold mb-1">Seguridad en Redes</h4>
+                  <p class="text-sm text-gray-600 mb-2">
+                    Descripción de riesgos de seguridad en Redes
+                  </p>
+                  <p class="text-xs text-purple-700">Redes</p>
+                </div>
+                <div class="flex justify-end mt-3">
+                  <a
+                    href="detalle-recurso.html"
+                    class="text-blue-500 hover:text-blue-700"
+                    >Ver más</a
+                  >
+                  <button class="ml-4 text-gray-400 hover:text-gray-600">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section id="ciencias" class="mb-8 p-4 border rounded-lg bg-red-50">
+            <h3 class="text-2xl font-bold mb-4 text-red-800">Ciencias</h3>
+            <div class="text-gray-700">
+              <p class="mb-2">
+                Para ver todos los recursos de Ciencia, visita nuestra página
+                dedicada:
+              </p>
+              <a
+                href="pages/ciencia.html"
+                class="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-200 ease-in-out"
+                >Explorar Recursos de Ciencia</a
+              >
+            </div>
+          </section>
+
+          <section
+            id="humanidades"
+            class="mb-8 p-4 border rounded-lg bg-yellow-50"
+          >
+            <h3 class="text-2xl font-bold mb-4 text-yellow-800">Humanidades</h3>
+            <div class="text-gray-700">
+              <p class="mb-2">
+                Para ver todos los recursos de Humanidades, visita nuestra
+                página dedicada:
+              </p>
+              <a
+                href="pages/humanidades.html"
+                class="inline-block bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition duration-200 ease-in-out"
+                >Explorar Recursos de Humanidades</a
+              >
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="w-screen bg-slate-800">
+      <div
+        class="w-screen py-4 px-28 flex justify-around items-center text-white"
+      >
+        <p>
+          &copy; 2025 📚 EduTec | Portal de Mentes Brillantes. Todos los
+          derechos reservados.
+        </p>
+        <nav class="menu-footer">
+          <ul>
+            <li>
+              <a href="#">Política de Privacidad</a>
+            </li>
+            <li><a href="#">Términos de Servicio</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      function filterMaterials() {
+        const input = document.getElementById("search-materia-input");
+        const filter = input.value.toLowerCase();
+        const resourceItems = document.querySelectorAll(".resource-item");
+        let foundAny = false;
+
+        resourceItems.forEach((item) => {
+          const title = item.dataset.title.toLowerCase();
+          const description = item.dataset.description.toLowerCase();
+          const category = item.dataset.category.toLowerCase(); // Si quieres buscar por la materia destacada
+
+          // Oculta todas las secciones de recursos primero, y luego las muestra si hay coincidencia
+          item.closest("section").style.display = "none";
+
+          if (
+            title.includes(filter) ||
+            description.includes(filter) ||
+            category.includes(filter)
+          ) {
+            item.style.display = "flex"; // Muestra el item de recurso
+            item.closest("section").style.display = "block"; // Muestra la sección a la que pertenece
+            foundAny = true;
+          } else {
+            item.style.display = "none"; // Oculta el item de recurso
+          }
+        });
+
+        // Si no se encuentra ningún item de recurso, se ocultarán todas las secciones
+        // Puedes añadir un mensaje "No se encontraron resultados" si lo deseas
+        if (!foundAny && filter !== "") {
+          // Aquí podrías mostrar un mensaje de "No se encontraron resultados"
+          // Por ejemplo, creando un div con id="no-results-materia" y mostrándolo
+          console.log("No se encontraron resultados para la búsqueda interna.");
+        } else if (filter === "") {
+          // Si la búsqueda está vacía, muestra todas las secciones y sus ítems
+          document.querySelectorAll("section[id]").forEach((section) => {
+            section.style.display = "block";
+          });
+          resourceItems.forEach((item) => {
+            item.style.display = "flex";
+          });
+        }
+      }
+
+      // JavaScript para desplazar la vista al hacer clic en las categorías
+      document.querySelectorAll(".md\\:col-span-1 a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100, // Ajusta 100px para que no quede pegado al header
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

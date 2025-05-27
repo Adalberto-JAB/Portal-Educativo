@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body class="box-border p-0 m-0 bg-slate-200">
-    <header class="bg-[url(/img/portada.jpg)] bg-cover bg-center">
+    <header
+      class="font-[Montserrat] bg-[url(/img/portada.jpg)] bg-cover bg-center header-pagina"
+    >
       <div
-        class="relative flex justify-around items-center hover:bg-slate-700 border-b-2 hover:border-b-0 p-4 barra-sup"
+        class="relative flex justify-around items-center hover:bg-blue-800 border-b-2 hover:border-b-0 p-4 barra-sup"
       >
         <div class="text-white">
           <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
@@ -50,9 +52,10 @@
                 <a href="#" class="desktop-submenu-link">Categorías</a>
 
                 <ul class="submenu-content">
-                  <li><a href="../paginas/ciencia.html">Ciencia</a></li>
-                  <li><a href="../paginas/tecnologia.html">Tecnología</a></li>
-                  <li><a href="../paginas/humanidades.html">Humanidades</a></li>
+                  <li><a href="ciencia.html">Ciencia</a></li>
+                  <li><a href="tecnologia.html">Tecnología</a></li>
+                  <li><a href="humanidades.html">Humanidades</a></li>
+                  <li><a href="filtros-materias.html">Otras</a></li>
                 </ul>
               </li>
               <li><a href="#">Nosotros</a></li>
@@ -62,43 +65,15 @@
         </section>
       </div>
       <div class="flex justify-center items-center text-white barra-central">
-        <h2 class="text-2xl text-center font-extrabold">
+        <h2 class="text-2xl lg:text-6xl text-center font-extrabold my-8">
           Explora las Humanidades
         </h2>
       </div>
-      <section
-        class="w-screen h-16 flex justify-between items-center text-base font-bold px-4 md:px-12 bg-slate-700 barra-buscar"
-      >
-        <div class="text-white">
-          <form action="../resultados-busqueda.html" method="get" class="barra-busqueda flex items-center">
-            <input
-              type="text"
-              name="q"
-              placeholder="Buscar por tema, autor, palabra clave..."
-              aria-label="Buscar recursos"
-              class="w-40 md:w-96 text-black px-1 font-semibold"
-            />
-            <button
-              type="submit"
-              class="mx-4 text-orange-300 duration-300 ease-linear hover:scale-125 hover:text-orange-500 text-sm md:text-base"
-            >
-              Buscar
-            </button>
-          </form>
-        </div>
-        <div>
-          <a href="../subir-recurso.html"
-            class="px-3 py-2 md:px-6 md:py-3 text-orange-300 duration-300 ease-linear hover:text-orange-500 hover:scale-125 text-sm md:text-base"
-          >
-            Subir Recurso
-          </a>
-        </div>
-      </section>
     </header>
-
-    <main class="main-layout">
-      <div class="main-content bg-white p-6 md:p-8">
-        <h2 class="text-3xl font-bold mb-6 text-gray-900">
+    
+    <main class="main-content flex justify-center">
+      <div class="max-w-6xl bg-white p-6 md:p-8">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900 text-center">
           La Riqueza del Pensamiento Humano
         </h2>
         <p class="text-lg text-gray-700 leading-relaxed mb-6">
@@ -111,7 +86,7 @@
           nuestro mundo.
         </p>
 
-        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Recursos Destacados en Humanidades:</h3>
+        <h3 class="text-2xl font-semibold m-7 text-gray-800 text-center">Recursos Destacados en Humanidades:</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <article class="bg-gray-100 p-4 rounded-lg shadow-sm">
                 <h4 class="text-xl font-semibold mb-2">Grandes Civilizaciones de la Antigüedad</h4>
@@ -137,21 +112,21 @@
       </div>
     </main>
 
-    <footer
-      class="w-screen bg-slate-800 flex justify-around items-center text-white p-4 md:p-8"
-    >
-      <div class="w-full text-center md:text-left">
+    <footer class="w-screen bg-slate-800">
+      <div
+        class="w-screen py-4 px-28 flex justify-around items-center text-white"
+      >
         <p>
-          &copy; 2023 📚 EduTec | Portal de Mentes Brillantes. Todos los
+          &copy; 2025 📚 EduTec | Portal de Mentes Brillantes. Todos los
           derechos reservados.
         </p>
-        <nav class="menu-footer mt-2">
-          <ul class="flex flex-col md:flex-row justify-center md:justify-start space-y-1 md:space-y-0 md:space-x-4">
+        <nav class="menu-footer">
+          <ul>
             <li>
-              <a href="../politica-privacidad.html" class="hover:underline">Política de Privacidad</a>
+              <a href="#">Política de Privacidad</a>
             </li>
-            <li><a href="../terminos-servicio.html" class="hover:underline">Términos de Servicio</a></li>
-            <li><a href="../faq.html" class="hover:underline">FAQ</a></li>
+            <li><a href="#">Términos de Servicio</a></li>
+            <li><a href="#">FAQ</a></li>
           </ul>
         </nav>
       </div>

@@ -19,47 +19,45 @@ Notas pequeñas / Footer Roboto 12-14 px Regular / Gris claro
 
 .txt-color-primario {
   /* Azul institucional */
-  color: #1A4D7F;
+  color: #1a4d7f;
 }
 .txt-color-secundario {
-  /* Naranja complementario */ 
-  color: #FF7F11;
+  /* Naranja complementario */
+  color: #ff7f11;
 }
 .txt-fondo-general {
   /* Blanco cálido */
-  color: #F8F8F8;
-} 
+  color: #f8f8f8;
+}
 .txt-texto-principal {
   /* Gris oscuro neutro */
-  color: #333333; 
+  color: #333333;
 }
 .txt-enfasis-alerta {
   /* Rojo vibrante */
-  color: #C62828;
+  color: #c62828;
 }
 
 .bg-color-primario {
   /* Azul institucional */
-  background-color: #1A4D7F;
+  background-color: #1a4d7f;
 }
 .bg-color-secundario {
-  /* Naranja complementario */ 
-  background-color: #FF7F11;
+  /* Naranja complementario */
+  background-color: #ff7f11;
 }
 .bg-fondo-general {
   /* Blanco cálido */
-  background-color: #F8F8F8;
-} 
+  background-color: #f8f8f8;
+}
 .bg-texto-principal {
   /* Gris oscuro neutro */
-  background-color: #333333; 
+  background-color: #333333;
 }
 .bg-enfasis-alerta {
   /* Rojo vibrante */
-  background-color: #C62828;
+  background-color: #c62828;
 }
-
-
 
 /* ------------------------------------ */
 /* ESTILOS POR DEFECTO (MOBILE-FIRST)  */
@@ -258,7 +256,7 @@ a {
 
 /* OCULTAR EL ENLACE DE DESKTOP EN MÓVIL */
 .desktop-submenu-link {
-    display: none;
+  display: none;
 }
 
 /* Estilos para el elemento que activa el submenú en móvil */
@@ -277,9 +275,13 @@ a {
 }
 
 .mobile-submenu-trigger .submenu-arrow {
-  display: block; /* Asegurar que la flecha sea un bloque */
-  margin-left: 0.5rem; /* Pequeño espacio entre texto y flecha */
-  transition: transform 0.3s ease;
+  display: block;
+  /*Asegurarquelaflechaseaunbloque*/margin-left: 0.5rem;
+  /*Pequeñoespacioentretextoyflecha*/transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
 }
 
 /* Rotar la flecha cuando el submenú está abierto */
@@ -317,15 +319,18 @@ a {
   /* max-height: 300px;  <-- YA NO ES NECESARIO CON display: block */
 }
 
-
 /* ------------------------------------ */
 /* MEDIA QUERIES (DESKTOP)            */
 /* Se aplican estilos ADICIONALES para pantallas más grandes */
 /* ------------------------------------ */
 
 @media (min-width: 1024px) {
-  header {
+  .header-index {
     height: 51vh; /* Restaura la altura en desktop si es deseado */
+  }
+
+  .header-paginas {
+    height: 30vh; /* Restaura la altura en desktop si es deseado */
   }
 
   /* --- Ícono de Hamburguesa (ocultar en desktop) --- */
@@ -369,22 +374,26 @@ a {
 
   /* Ocultar el mobile-trigger en desktop */
   .mobile-submenu-trigger {
-      display: none;
+    display: none;
   }
 
   /* Mostrar el link de desktop en desktop */
   .desktop-submenu-link {
-      display: block;
-      /*Mostrarelenlace*/padding: 0.5rem 1rem;
-      /*MISMOPADDINGqueotrosenlacesendesktop*/border-radius: 5px;
-      /*Añadehovereffect*/transition: background-color 0.3s ease;
-      -webkit-transition: background-color 0.3s ease;
-      -moz-transition: background-color 0.3s ease;
-      -ms-transition: background-color 0.3s ease;
-      -o-transition: background-color 0.3s ease;
+    /*Mostrarelenlace*/display: block;
+    /*MISMOPADDINGqueotrosenlacesendesktop*/padding: 0.5rem 1rem;
+    /*Añadehovereffect*/border-radius: 5px;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
   .desktop-submenu-link:hover {
-      background-color: rgba(255, 255, 255, 0.1); /* Efecto hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto hover */
   }
 
   /* --- Ocultar el Checkbox del Submenú en Desktop --- */
@@ -394,27 +403,25 @@ a {
 
   /* --- Estilos del Submenú (Desktop - con hover) --- */
   .has-submenu .submenu-content {
-    /* Oculto por defecto */
-    display: none;
-    /* Posicionamiento absoluto respecto al padre(li) */
-    position: absolute;
+    /*Ocultopordefecto*/display: none;
+    /*Posicionamientoabsolutorespectoalpadre(li)*/position: absolute;
     background-color: #444;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    /* Se despliega debajo */
-    left: 0;
-    /* Justo debajo de la opción principal */
-    top: 100%;
+    /*Sedespliegadebajo*/left: 0;
+    /*Justodebajodelaopciónprincipal*/top: 100%;
     border-radius: 5px;
-    /* Asegurar que el contenido no se desborde al inicio */
-    overflow: hidden;
-    /* Transición para un despliegue suave */
-    transition: all 0.3s ease;
+    /*Asegurarqueelcontenidonosedesbordealinicio*/overflow: hidden;
+    /*Transiciónparaundesplieguesuave*/transition: all 0.3s ease;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
   .has-submenu .submenu-content li a {
@@ -423,7 +430,11 @@ a {
     text-align: left;
     border-bottom: none;
     transition: background-color 0.2s ease;
-  }
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -ms-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+}
   .has-submenu .submenu-content li a:hover {
     background-color: #666;
   }
@@ -448,5 +459,64 @@ a {
 
   .main-content {
     padding: 1.5rem;
+  }
+}
+
+
+/* ******************************************** */
+/* ******************************************** */
+/* Estilos específicos para la Modal de Filtros */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Ajustes para el grid del main-layout en esta página */
+.main-layout-biblioteca {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar fijo de 250px, content el resto */
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px; /* Ancho máximo para el contenido principal */
+  margin: 0 auto; /* Centrar el contenido */
+}
+@media (max-width: 768px) {
+  .main-layout-biblioteca {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    padding: 1rem;
+  }
+  .main-layout-biblioteca .sidebar-biblioteca {
+    width: 100%; /* Ocupa todo el ancho en móviles */
   }
 }
