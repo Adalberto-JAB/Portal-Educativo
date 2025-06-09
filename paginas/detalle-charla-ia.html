@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charla: El Futuro de la IA en la Educación | EduTec</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  </head>
+<body class="box-border p-0 m-0 bg-slate-200">
+  <header
+      class="font-[Montserrat] bg-[url(../img/portada.jpg)] bg-cover bg-center header-pagina"
+    >
+      <div
+        class="relative flex justify-around items-center hover:bg-blue-800 border-b-2 hover:border-b-0 p-4 barra-sup"
+      >
+        <div class="text-white">
+          <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
+            <a href="../index.html">📚 EduTec</a>
+          </h1>
+          <p class="text-base text-center font-semibold">
+            Portal de Mentes Brillantes
+          </p>
+        </div>
+        <section>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label>
+
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="biblioteca.html">Biblioteca</a></li>
+              <li class="has-submenu">
+                <input
+                  type="checkbox"
+                  id="submenu-toggle-productos"
+                  class="submenu-toggle"
+                />
+
+                <label
+                  for="submenu-toggle-productos"
+                  class="mobile-submenu-trigger"
+                >
+                  <span class="menu-item-text">Recursos</span>
+                  <span class="submenu-arrow">▼</span>
+                </label>
+
+                <a href="#" class="desktop-submenu-link">Recursos</a>
+
+                <ul class="submenu-content">
+                  <li><a href="ciencia.html">Ciencia</a></li>
+                  <li><a href="tecnologia.html">Tecnología</a></li>
+                  <li><a href="humanidades.html">Humanidades</a></li>
+                  <li><a href="filtros-materias.html">Ver por materias</a></li>
+                  <li><a href="busqueda.html">Busqueda avanzada</a></li>
+                  <li><a href="filtro-formatos-materia.html">Formatos de recursos</a></li>
+                  <li><a href="seccion-recomendados.html">Recomendados</a></li>
+                </ul>
+              </li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <div class="flex justify-center items-center text-white barra-central">
+        <h2 class="text-2xl lg:text-6xl text-center font-extrabold my-8">
+          Detalles del Evento
+        </h2>
+      </div>
+    </header>
+
+  <main class="main-content bg-white p-6 md:p-10 lg:p-12 max-w-4xl mx-auto my-8 rounded-lg shadow-lg">
+    <h1 class="font-[Montserrat] text-3xl md:text-5xl font-extrabold text-blue-800 text-center mb-6">
+      Charla: El Futuro de la IA en la Educación
+    </h1>
+
+    <div class="flex flex-col md:flex-row items-start md:space-x-8">
+      <div class="md:w-2/3">
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+          Esta charla explorará el impacto transformador de la Inteligencia Artificial en el ámbito educativo. Abordaremos cómo la IA está redefiniendo los métodos de enseñanza, personalizando el aprendizaje y ofreciendo nuevas herramientas tanto para estudiantes como para docentes. Se discutirán las oportunidades y desafíos que presenta esta tecnología.
+        </p>
+        <h3 class="font-[Montserrat] text-2xl font-bold text-green-700 mb-3">Temas a Cubrir:</h3>
+        <ul class="list-disc list-inside text-gray-700 mb-6">
+          <li>Panorama actual de la IA en la educación.</li>
+          <li>Personalización del aprendizaje y sistemas de tutoría inteligentes.</li>
+          <li>Herramientas de IA para docentes y gestión educativa.</li>
+          <li>Ética y desafíos en la implementación de la IA.</li>
+          <li>Casos de éxito y proyecciones a futuro.</li>
+        </ul>
+
+        <p class="text-gray-800 text-lg mb-2"><span class="font-bold">Modalidad:</span> Virtual (Zoom)</p>
+        <p class="text-gray-800 text-lg mb-2"><span class="font-bold">Duración:</span> 90 minutos</p>
+        <p class="text-gray-800 text-lg mb-2"><span class="font-bold">Fecha:</span> 5 de Agosto de 2025</p>
+        <p class="text-gray-800 text-lg mb-2"><span class="font-bold">Hora:</span> 18:00 (GMT-3)</p>
+        <p class="text-gray-800 text-lg mb-2"><span class="font-bold">Ponente:</span> Dra. Ana Gómez (Experta en IA y Educación)</p>
+      </div>
+
+      <div class="md:w-1/3 bg-gray-50 p-6 rounded-lg shadow-md mt-6 md:mt-0">
+        <h3 class="font-[Montserrat] text-2xl font-bold text-green-700 text-center mb-4">Formulario de Registro</h3>
+        <form action="agradecimiento-inscripcion.html" method="GET" class="space-y-4">
+          <div>
+            <label for="nombre_charla" class="block text-gray-700 text-sm font-bold mb-2">Nombre Completo:</label>
+            <input type="text" id="nombre_charla" name="nombre_charla" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+          </div>
+          <div>
+            <label for="email_charla" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico:</label>
+            <input type="email" id="email_charla" name="email_charla" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+          </div>
+          <div>
+            <label for="institucion_charla" class="block text-gray-700 text-sm font-bold mb-2">Institución (opcional):</label>
+            <input type="text" id="institucion_charla" name="institucion_charla" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="confirmacion_charla" name="confirmacion_charla" class="mr-2 leading-tight">
+            <label for="confirmacion_charla" class="text-sm text-gray-700">Recibir recordatorios por email.</label>
+          </div>
+          <div class="flex justify-center">
+            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline transition-all duration-300">
+              Registrarme
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-screen bg-slate-800">
+      <div
+        class="w-screen py-4 px-8 lg:px-28 flex justify-around items-center text-white gap-8"
+      >
+        <div>
+          <p>&copy; 2025 📚 EduTec | Portal de Mentes Brillantes.</p>
+          <p>Todos los derechos reservados.</p>
+        </div>
+        <nav class="menu-footer">
+          <ul>
+            <li class="mb-2">
+              <a href="nosotros.html" class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold">Sobre Nosotros</a>
+            </li>
+            <li><a href="contacto.html" class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold">Contactanos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+</body>
+</html>

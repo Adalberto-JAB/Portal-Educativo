@@ -9,7 +9,7 @@
   </head>
   <body class="box-border p-0 m-0 bg-slate-200">
     <header
-      class="font-[Montserrat] bg-[url(/img/portada.jpg)] bg-cover bg-center header-pagina"
+      class="font-[Montserrat] bg-[url(../img/portada.jpg)] bg-cover bg-center header-pagina"
     >
       <div
         class="relative flex justify-around items-center hover:bg-blue-800 border-b-2 hover:border-b-0 p-4 barra-sup"
@@ -33,7 +33,7 @@
           <nav class="nav-menu">
             <ul>
               <li><a href="../index.html">Inicio</a></li>
-              <li><a href="../biblioteca.html">Biblioteca</a></li>
+              <li><a href="biblioteca.html">Biblioteca</a></li>
               <li class="has-submenu">
                 <input
                   type="checkbox"
@@ -45,21 +45,24 @@
                   for="submenu-toggle-productos"
                   class="mobile-submenu-trigger"
                 >
-                  <span class="menu-item-text">Categorías</span>
+                  <span class="menu-item-text">Recursos</span>
                   <span class="submenu-arrow">▼</span>
                 </label>
 
-                <a href="#" class="desktop-submenu-link">Categorías</a>
+                <a href="#" class="desktop-submenu-link">Recursos</a>
 
                 <ul class="submenu-content">
                   <li><a href="ciencia.html">Ciencia</a></li>
                   <li><a href="tecnologia.html">Tecnología</a></li>
                   <li><a href="humanidades.html">Humanidades</a></li>
-                  <li><a href="filtros-materias.html">Otras</a></li>
+                  <li><a href="filtros-materias.html">Ver por materias</a></li>
+                  <li><a href="busqueda.html">Busqueda avanzada</a></li>
+                  <li><a href="filtro-formatos-materia.html">Formatos de recursos</a></li>
+                  <li><a href="seccion-recomendados.html">Recomendados</a></li>
                 </ul>
               </li>
-              <li><a href="#">Nosotros</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
             </ul>
           </nav>
         </section>
@@ -73,29 +76,27 @@
 
     <main class="main-content flex justify-center">
       <div class="max-w-6xl bg-white p-6 md:p-8">
-        <h2 class="text-2xl font-bold mb-4">Resultados para: "<span id="search-query" class="text-blue-700"></span>"</h2>
-        <p id="no-results" class="text-gray-600 italic hidden mb-4">No se encontraron resultados para esta búsqueda. Intenta con otra palabra clave.</p>
-
+        <h2 class="text-2xl font-bold mb-4">Resultados de la Búsqueda</h2>
         <div id="search-results-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <article class="bg-gray-100 p-4 rounded-lg shadow-sm search-result" data-keywords="metodologías, ingeniería, software, ágil, cascada, desarrollo">
+            <article class="bg-gray-100 p-4 rounded-lg shadow-sm search-result">
                 <h3 class="text-xl font-semibold mb-2">Metodologías de la Ingeniería del Software</h3>
                 <p class="text-sm text-gray-600 mb-2">Categoría: Informática/Tecnología | Nivel: Intermedio</p>
                 <p class="text-gray-700 text-sm">Este recurso profundiza en las metodologías tradicionales y ágiles en el desarrollo de software, explicando sus principios y contextos de aplicación.</p>
-                <a href="detalle-recurso-metodologias.html" class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm">Ver más</a>
+                <a href="detalle-recurso.html" class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm">Ver más</a>
             </article>
 
-            <article class="bg-gray-100 p-4 rounded-lg shadow-sm search-result" data-keywords="python, programación, básico, introducción">
+            <article class="bg-gray-100 p-4 rounded-lg shadow-sm search-result">
                 <h3 class="text-xl font-semibold mb-2">Introducción a la Programación con Python</h3>
                 <p class="text-sm text-gray-600 mb-2">Categoría: Informática/Tecnología | Nivel: Básico</p>
                 <p class="text-gray-700 text-sm">Guía completa para principiantes que desean aprender a programar en Python desde cero, cubriendo conceptos fundamentales y ejemplos prácticos.</p>
                 <a href="detalle-recurso.html" class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm">Ver más</a>
             </article>
 
-            <article class="bg-gray-100 p-4 rounded-lg shadow-sm search-result" data-keywords="algebra, matemáticas, ecuaciones, lineal">
+            <article class="bg-gray-100 p-4 rounded-lg shadow-sm search-result">
                 <h3 class="text-xl font-semibold mb-2">Fundamentos de Álgebra Lineal</h3>
                 <p class="text-sm text-gray-600 mb-2">Categoría: Matemáticas | Nivel: Universitario</p>
                 <p class="text-gray-700 text-sm">Explora los conceptos esenciales del álgebra lineal, incluyendo vectores, matrices, transformaciones y sistemas de ecuaciones.</p>
-                <a href="#" class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm">Ver más</a>
+                <a href="detalle-recurso.html" class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm">Ver más</a>
             </article>
 
             </div>
@@ -104,63 +105,21 @@
 
     <footer class="w-screen bg-slate-800">
       <div
-        class="w-screen py-4 px-28 flex justify-around items-center text-white"
+        class="w-screen py-4 px-8 lg:px-28 flex justify-around items-center text-white gap-8"
       >
-        <p>
-          &copy; 2025 📚 EduTec | Portal de Mentes Brillantes. Todos los
-          derechos reservados.
-        </p>
+        <div>
+          <p>&copy; 2025 📚 EduTec | Portal de Mentes Brillantes.</p>
+          <p>Todos los derechos reservados.</p>
+        </div>
         <nav class="menu-footer">
           <ul>
-            <li>
-              <a href="#">Política de Privacidad</a>
+            <li class="mb-2">
+              <a href="nosotros.html" class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold">Sobre Nosotros</a>
             </li>
-            <li><a href="#">Términos de Servicio</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="contacto.html" class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold">Contactanos</a></li>
           </ul>
         </nav>
       </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const searchTerm = urlParams.get('q'); // Obtiene el valor del parámetro 'q' de la URL
-            const searchQuerySpan = document.getElementById('search-query');
-            const searchInputResults = document.getElementById('search-input-results');
-            const searchResults = document.querySelectorAll('.search-result');
-            const noResultsMessage = document.getElementById('no-results');
-            let resultsFound = false;
-
-            if (searchTerm) {
-                searchQuerySpan.textContent = searchTerm; // Muestra el término de búsqueda
-                searchInputResults.value = searchTerm; // Rellena el input de búsqueda con el término
-
-                const lowerCaseSearchTerm = searchTerm.toLowerCase();
-
-                searchResults.forEach(result => {
-                    const keywords = result.dataset.keywords.toLowerCase(); // Obtiene las palabras clave del atributo data-keywords
-                    if (keywords.includes(lowerCaseSearchTerm)) {
-                        result.style.display = 'block'; // Muestra el resultado si coincide
-                        resultsFound = true;
-                    } else {
-                        result.style.display = 'none'; // Oculta si no coincide
-                    }
-                });
-            } else {
-                searchQuerySpan.textContent = 'todos los recursos'; // Si no hay término, muestra todos los recursos
-                searchResults.forEach(result => {
-                    result.style.display = 'block'; // Muestra todos por defecto
-                });
-                resultsFound = true; // Se consideran resultados encontrados si se muestran todos
-            }
-
-            if (!resultsFound) {
-                noResultsMessage.classList.remove('hidden'); // Muestra el mensaje de no resultados
-            } else {
-                noResultsMessage.classList.add('hidden'); // Oculta si hay resultados
-            }
-        });
-    </script>
   </body>
 </html>
