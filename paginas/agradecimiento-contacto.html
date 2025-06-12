@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¡Mensaje Recibido! | EduTec</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../css/style.css" />
-</head>
-<body class="box-border p-0 m-0 bg-slate-200 min-h-screen flex flex-col">
-  <header class="font-[Montserrat] bg-[url(../img/portada.jpg)] bg-cover bg-center header-pagina">
-    <div class="relative flex justify-around items-center hover:bg-blue-800 border-b-2 hover:border-b-0 p-4 barra-sup">
-      <div class="text-white">
-        <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
-          <a href="../index.html">📚 EduTec</a>
-        </h1>
-        <p class="text-base text-center font-semibold">
-          Portal de Mentes Brillantes
-        </p>
-      </div>
-      <section>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-        <label for="menu-toggle" class="hamburger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Mensaje Recibido! | EduTec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="box-border p-0 m-0 bg-slate-200 min-h-screen flex flex-col">
+    <header
+      class="font-[Montserrat] bg-[url(../img/portada.jpg)] bg-cover bg-center header-pagina"
+    >
+      <div
+        class="relative flex justify-around items-center hover:bg-blue-800 border-b-2 hover:border-b-0 p-4 barra-sup"
+      >
+        <div class="text-white">
+          <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
+            <a href="../index.html">📚 EduTec</a>
+          </h1>
+          <p class="text-base text-center font-semibold">
+            Portal de Mentes Brillantes
+          </p>
+        </div>
+        <section>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label>
 
-        <nav class="nav-menu">
+          <nav class="nav-menu">
             <ul>
               <li><a href="../index.html">Inicio</a></li>
               <li><a href="biblioteca.html">Biblioteca</a></li>
@@ -48,51 +52,83 @@
                 <a href="#" class="desktop-submenu-link">Recursos</a>
 
                 <ul class="submenu-content">
-                  <li><a href="ciencia.html">Ciencia</a></li>
-                  <li><a href="tecnologia.html">Tecnología</a></li>
-                  <li><a href="humanidades.html">Humanidades</a></li>
-                  <li><a href="filtros-materias.html">Ver por materias</a></li>
+                  <li><a href="idas.html">IDAS</a></li>
+                  <li><a href="diseño-web.html">Diseño WEB</a></li>
+                  <li>
+                    <a href="diseño-de-interfaces.html">Diseño de Interfaces</a>
+                  </li>
+                  <li>
+                    <a href="filtros-materias.html">Ver por materias</a>
+                  </li>
                   <li><a href="busqueda.html">Busqueda avanzada</a></li>
-                  <li><a href="filtro-formatos-materia.html">Formatos de recursos</a></li>
-                  <li><a href="seccion-recomendados.html">Recomendados</a></li>
+                  <li>
+                    <a href="filtro-formatos-materia.html"
+                      >Formatos de recursos</a
+                    >
+                  </li>
+                  <li>
+                    <a href="seccion-recomendados.html">Recomendados</a>
+                  </li>
                 </ul>
               </li>
               <li><a href="nosotros.html">Nosotros</a></li>
               <li><a href="contacto.html">Contacto</a></li>
             </ul>
           </nav>
-      </section>
-    </div>
-    <div class="flex justify-center items-center text-white barra-central">
-      <h2 class="text-xl lg:text-4xl text-center font-extrabold my-8">
-        ¡Mensaje Enviado con Éxito!
-      </h2>
-    </div>
-  </header>
+        </section>
+      </div>
+      <div class="flex justify-center items-center text-white barra-central">
+        <h2 class="text-xl lg:text-4xl text-center font-extrabold my-8">
+          ¡Mensaje Enviado con Éxito!
+        </h2>
+      </div>
+    </header>
 
-  <main class="main-content flex-grow flex items-center justify-center bg-slate-200 py-12 px-4">
-    <div class="bg-white p-8 md:p-12 rounded-lg shadow-xl max-w-2xl text-center">
-      <svg class="mx-auto h-24 w-24 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-      </svg>
-      <h1 class="font-[Montserrat] text-3xl md:text-4xl font-extrabold text-blue-800 mt-6 mb-4">
-        ¡Gracias por contactarnos!
-      </h1>
-      <p class="text-lg text-gray-700 leading-relaxed mb-6">
-        Hemos recibido tu mensaje y agradecemos tu interés en EduTec.
-        <br class="hidden sm:inline" />
-        Nos pondremos en contacto contigo a la brevedad posible para responder a tu consulta.
-      </p>
-      <p class="text-md text-gray-600 mb-8">
-        Por favor, revisa tu correo electrónico (incluyendo la carpeta de spam) para nuestra respuesta.
-      </p>
-      <a href="../index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md">
-        Volver al Inicio
-      </a>
-    </div>
-  </main>
+    <main
+      class="main-content flex-grow flex items-center justify-center bg-slate-200 py-12 px-4"
+    >
+      <div
+        class="bg-white p-8 md:p-12 rounded-lg shadow-xl max-w-2xl text-center"
+      >
+        <svg
+          class="mx-auto h-24 w-24 text-green-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+        <h1
+          class="font-[Montserrat] text-3xl md:text-4xl font-extrabold text-blue-800 mt-6 mb-4"
+        >
+          ¡Gracias por contactarnos!
+        </h1>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Hemos recibido tu mensaje y agradecemos tu interés en EduTec.
+          <br class="hidden sm:inline" />
+          Nos pondremos en contacto contigo a la brevedad posible para responder
+          a tu consulta.
+        </p>
+        <p class="text-md text-gray-600 mb-8">
+          Por favor, revisa tu correo electrónico (incluyendo la carpeta de
+          spam) para nuestra respuesta.
+        </p>
+        <a
+          href="../index.html"
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-md"
+        >
+          Volver al Inicio
+        </a>
+      </div>
+    </main>
 
-  <footer class="w-screen bg-slate-800">
+    <footer class="w-screen bg-slate-800">
       <div
         class="w-screen py-4 px-8 lg:px-28 flex justify-around items-center text-white gap-8"
       >
@@ -103,12 +139,22 @@
         <nav class="menu-footer">
           <ul>
             <li class="mb-2">
-              <a href="nosotros.html" class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold">Sobre Nosotros</a>
+              <a
+                href="nosotros.html"
+                class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold"
+                >Sobre Nosotros</a
+              >
             </li>
-            <li><a href="contacto.html" class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold">Contactanos</a></li>
+            <li>
+              <a
+                href="contacto.html"
+                class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold"
+                >Contactanos</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
     </footer>
-</body>
+  </body>
 </html>

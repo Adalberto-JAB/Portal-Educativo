@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diseño de Interfaces | EduTec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="box-border p-0 m-0 bg-slate-200">
+    <header
+      class="font-[Montserrat] bg-[url(../img/portada.jpg)] bg-cover bg-center header-pagina"
+    >
+      <div
+        class="relative flex justify-around items-center hover:bg-blue-800 border-b-2 hover:border-b-0 p-4 barra-sup"
+      >
+        <div class="text-white">
+          <h1 class="text-4xl lg:text-6xl font-extrabold pb-2">
+            <a href="../index.html">📚 EduTec</a>
+          </h1>
+          <p class="text-base text-center font-semibold">
+            Portal de Mentes Brillantes
+          </p>
+        </div>
+        <section>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </label>
+
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="biblioteca.html">Biblioteca</a></li>
+              <li class="has-submenu">
+                <input
+                  type="checkbox"
+                  id="submenu-toggle-productos"
+                  class="submenu-toggle"
+                />
+
+                <label
+                  for="submenu-toggle-productos"
+                  class="mobile-submenu-trigger"
+                >
+                  <span class="menu-item-text">Recursos</span>
+                  <span class="submenu-arrow">▼</span>
+                </label>
+
+                <a href="#" class="desktop-submenu-link">Recursos</a>
+
+                <ul class="submenu-content">
+                  <li><a href="idas.html">IDAS</a></li>
+                  <li><a href="diseño-web.html">Diseño WEB</a></li>
+                  <li>
+                    <a href="diseño-de-interfaces.html">Diseño de Interfaces</a>
+                  </li>
+                  <li>
+                    <a href="filtros-materias.html">Ver por materias</a>
+                  </li>
+                  <li><a href="busqueda.html">Busqueda avanzada</a></li>
+                  <li>
+                    <a href="filtro-formatos-materia.html"
+                      >Formatos de recursos</a
+                    >
+                  </li>
+                  <li>
+                    <a href="seccion-recomendados.html">Recomendados</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+      <div class="flex justify-center items-center text-white barra-central">
+        <h2 class="text-xl lg:text-4xl text-center font-extrabold my-8">
+          Diseño de Interfaces y Experiencias de Usuario
+        </h2>
+      </div>
+    </header>
+
+    <main class="main-content flex justify-center">
+      <div class="max-w-6xl bg-white p-6 md:p-8">
+        <h2 class="text-3xl font-bold mb-6 text-gray-900 text-center">
+          Diseño de Interfaces y Experiencias de Usuario (UI/UX): Humanizando la
+          Tecnología
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          En un mundo cada vez más digital, no basta con que los productos y
+          servicios funcionen; deben ser intuitivos, placenteros y
+          verdaderamente útiles. La materia "Diseño de Interfaces y Experiencias
+          de Usuario (UI/UX)" te invita a ir más allá del código y la estética,
+          para comprender y modelar cómo las personas interactúan con la
+          tecnología.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Te sumergirás en el fascinante campo de la creación de experiencias
+          digitales significativas. Aprenderás a investigar las necesidades y
+          comportamientos de los usuarios, a mapear sus recorridos, y a idear
+          soluciones que no solo resuelvan problemas, sino que también deleiten.
+          Explorarás los principios de diseño de interfaces (UI), dominando la
+          disposición de elementos, la tipografía, el color y la iconografía
+          para construir interfaces atractivas y fáciles de usar.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Desde la ideación y el prototipado hasta las pruebas de usabilidad y
+          la iteración, adquirirás un conjunto de habilidades fundamentales para
+          diseñar productos y servicios centrados en el ser humano. Descubrirás
+          cómo el diseño UX/UI es un proceso iterativo y colaborativo, esencial
+          para el éxito de cualquier aplicación, sitio web o sistema
+          interactivo.
+        </p>
+
+        <h3 class="text-2xl font-semibold m-7 text-gray-800 text-center">
+          Recursos Destacados:
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <h4 class="text-xl font-semibold mb-2">
+              Investigación de Usuario: Entendiendo a tu Público
+            </h4>
+            <p class="text-sm text-gray-600 mb-2">
+              Categoría: UX Research | Nivel: Básico
+            </p>
+            <p class="text-gray-700 text-sm">
+              Aprende a realizar entrevistas, encuestas y crear personas para
+              conocer a fondo a los usuarios.
+            </p>
+            <a
+              href="detalle-recurso.html"
+              class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm"
+              >Ver más</a
+            >
+          </article>
+
+          <article class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <h4 class="text-xl font-semibold mb-2">
+              Wireframes y Prototipos: De la Idea a la Interacción
+            </h4>
+            <p class="text-sm text-gray-600 mb-2">
+              Categoría: Diseño UX | Nivel: Intermedio
+            </p>
+            <p class="text-gray-700 text-sm">
+              Crea esquemas y maquetas interactivas para visualizar y validar
+              flujos de usuario antes de codificar.
+            </p>
+            <a
+              href="detalle-recurso.html"
+              class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm"
+              >Ver más</a
+            >
+          </article>
+
+          <article class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <h4 class="text-xl font-semibold mb-2">
+              Principios de Diseño Visual: UI Estética y Funcional
+            </h4>
+            <p class="text-sm text-gray-600 mb-2">
+              Categoría: Diseño UI | Nivel: Básico
+            </p>
+            <p class="text-gray-700 text-sm">
+              Domina el uso del color, la tipografía, el espacio y la
+              composición para interfaces atractivas y claras.
+            </p>
+            <a
+              href="detalle-recurso.html"
+              class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm"
+              >Ver más</a
+            >
+          </article>
+
+          <article class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <h4 class="text-xl font-semibold mb-2">
+              Pruebas de Usabilidad: Mejorando la Experiencia
+            </h4>
+            <p class="text-sm text-gray-600 mb-2">
+              Categoría: Evaluación UX | Nivel: Intermedio
+            </p>
+            <p class="text-gray-700 text-sm">
+              Aprende a conducir pruebas con usuarios reales para identificar
+              problemas y optimizar tus diseños.
+            </p>
+            <a
+              href="detalle-recurso.html"
+              class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm"
+              >Ver más</a
+            >
+          </article>
+
+          <article class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <h4 class="text-xl font-semibold mb-2">
+              Herramientas Esenciales para Diseñadores UI/UX
+            </h4>
+            <p class="text-sm text-gray-600 mb-2">
+              Categoría: Software | Nivel: Básico
+            </p>
+            <p class="text-gray-700 text-sm">
+              Familiarízate con las plataformas de diseño más usadas como Figma,
+              Adobe XD o Sketch para crear tus prototipos.
+            </p>
+            <a
+              href="detalle-recurso.html"
+              class="mt-3 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm"
+              >Ver más</a
+            >
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="w-screen bg-slate-800">
+      <div
+        class="w-screen py-4 px-8 lg:px-28 flex justify-around items-center text-white gap-8"
+      >
+        <div>
+          <p>&copy; 2025 📚 EduTec | Portal de Mentes Brillantes.</p>
+          <p>Todos los derechos reservados.</p>
+        </div>
+        <nav class="menu-footer">
+          <ul>
+            <li class="mb-2">
+              <a
+                href="nosotros.html"
+                class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold"
+                >Sobre Nosotros</a
+              >
+            </li>
+            <li>
+              <a
+                href="contacto.html"
+                class="text-cyan-200 duration-300 ease-linear hover:text-cyan-500 hover:underline text-sm font-bold"
+                >Contactanos</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

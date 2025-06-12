@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Subir Nuevo Recurso | EduTec</title>
+    <title>Sugerir Nuevo Recurso | EduTec</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
@@ -52,13 +52,23 @@
                 <a href="#" class="desktop-submenu-link">Recursos</a>
 
                 <ul class="submenu-content">
-                  <li><a href="ciencia.html">Ciencia</a></li>
-                  <li><a href="tecnologia.html">Tecnología</a></li>
-                  <li><a href="humanidades.html">Humanidades</a></li>
-                  <li><a href="filtros-materias.html">Ver por materias</a></li>
+                  <li><a href="idas.html">IDAS</a></li>
+                  <li><a href="diseño-web.html">Diseño WEB</a></li>
+                  <li>
+                    <a href="diseño-de-interfaces.html">Diseño de Interfaces</a>
+                  </li>
+                  <li>
+                    <a href="filtros-materias.html">Ver por materias</a>
+                  </li>
                   <li><a href="busqueda.html">Busqueda avanzada</a></li>
-                  <li><a href="filtro-formatos-materia.html">Formatos de recursos</a></li>
-                  <li><a href="seccion-recomendados.html">Recomendados</a></li>
+                  <li>
+                    <a href="filtro-formatos-materia.html"
+                      >Formatos de recursos</a
+                    >
+                  </li>
+                  <li>
+                    <a href="seccion-recomendados.html">Recomendados</a>
+                  </li>
                 </ul>
               </li>
               <li><a href="nosotros.html">Nosotros</a></li>
@@ -68,8 +78,8 @@
         </section>
       </div>
       <div class="flex justify-center items-center text-white barra-central">
-        <h2 class="text-2xl lg:text-6xl text-center font-extrabold my-8">
-          Cargar Nuevo Recurso Educativo
+        <h2 class="text-xl lg:text-4xl text-center font-extrabold my-8">
+          Sugerir Nuevo Recurso Educativo
         </h2>
       </div>
     </header>
@@ -77,18 +87,12 @@
     <main class="main-layout flex justify-center py-8">
       <div class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-lg">
         <h2 class="text-2xl font-bold mb-6 text-gray-900 text-center">
-          Formulario de Carga de Recurso
+          Formulario de Sugerencia del Recurso
         </h2>
 
-        <!-- <form
-          id="resourceUploadForm"
-          action="#"
-          method="post"
-          class="space-y-6"
-        > -->
         <form
           id="resourceUploadForm"
-          action="recurso-cargado.html"
+          action="sugerencia-cargada.html"
           method="get"
           class="space-y-6"
         >
@@ -247,7 +251,7 @@
               type="submit"
               class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-xl shadow-md transition duration-300 ease-in-out transform hover:scale-105"
             >
-              Subir Recurso
+              Enviar Sugerencia
             </button>
           </div>
         </form>
